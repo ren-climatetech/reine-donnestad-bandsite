@@ -1,0 +1,28 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+/*
+body{
+    font-family:'Courier New', Courier, monospace 
+    margin: 0;
+    background-color: 
+    color: 
+    font-size:
+
+    @include tablet {
+    margin:
+    }
+
+    @include desktop {
+     margin:
+    }
+}
+
+*/

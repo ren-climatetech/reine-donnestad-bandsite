@@ -1,1 +1,172 @@
-/*# sourceMappingURL=bio.css.map */
+/*this is pulling the styles from each font file, so when the font-weight is specified, there is a match*/
+@font-face {
+  font-family: "Avenir";
+  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../../assets/fonts/AvenirNextLTPro-Demi.otf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf");
+  font-weight: 700;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Avenir", sans-serif; /*unsure about this*/
+  margin: 0;
+}
+
+.subheader {
+  font-family: "Avenir", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  background-color: #323232;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  padding-bottom: 0;
+  margin: 0;
+}
+
+.navbar__menu {
+  background-color: #323232;
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  padding: 1rem;
+}
+.navbar__menu:hover {
+  border-bottom: 0.25rem solid #FFFFFF;
+}
+
+.button {
+  font-family: "Avenir", sans-serif;
+  font-size: 0.625rem;
+  color: #FFFFFF;
+  font-weight: 400;
+  display: flex;
+}
+
+.button a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/*.hovering:hover + button {
+  font-weight: 600;
+  border-bottom: .25rem solid $White; 
+}*/
+.pageheader {
+  background-image: url("/assets/images/hero-bio.jpg");
+  opacity: 80%;
+  background-size: cover;
+  display: flex;
+  width: 100%;
+  height: 60vw;
+}
+
+.pageheader__title {
+  font-family: "Avenir", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+  padding: 1rem;
+}
+
+/*BAND IMAGE*/
+.bandimage {
+  padding: 1rem;
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.sectionheader {
+  font-family: "Avenir", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 1rem;
+}
+
+.quote {
+  font-family: "Avenir", sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  padding: 1rem;
+}
+
+.bodyheader {
+  font-family: "Avenir", sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  display: flex;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.bodycopy {
+  font-family: "Avenir", sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  padding: 1rem;
+}
+
+.label {
+  font-family: "Avenir", sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  padding: 1rem;
+}
+
+.section_nav {
+  background-color: #323232;
+  color: #FFFFFF;
+}
+
+.section__about {
+  background-color: #FFFFFF;
+  color: #323232;
+}
+
+.section__photos {
+  background-color: #FAFAFA;
+  color: #323232;
+}
+
+.footer {
+  background-color: #323232;
+  color: #FFFFFF;
+  padding-bottom: 1rem;
+}
+
+.footercopy {
+  font-family: "Avenir", sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.footer__header {
+  font-family: "Avenir", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0;
+  padding-bottom: 0;
+}/*# sourceMappingURL=bio.css.map */

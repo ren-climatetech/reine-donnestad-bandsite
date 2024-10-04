@@ -1,5 +1,6 @@
 @use "./variables" as *;
 @use "./mixins" as *;
+@use "./typography" as *;
 
 *,
 *::before,
@@ -7,22 +8,7 @@
     box-sizing: border-box;
 }
 
-
-/*
 body{
-    font-family:'Courier New', Courier, monospace 
+    font-family:"Avenir", sans-serif;  /*unsure about this*/
     margin: 0;
-    background-color: 
-    color: 
-    font-size:
-
-    @include tablet {
-    margin:
-    }
-
-    @include desktop {
-     margin:
-    }
 }
-
-*/

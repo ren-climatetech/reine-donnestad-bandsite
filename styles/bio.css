@@ -39,27 +39,34 @@ body {
 }
 
 .navbar__menu {
-  background-color: #323232;
   display: flex;
   justify-content: space-around;
+  background-color: #323232;
   margin: 0;
   padding: 1rem;
 }
-.navbar__menu:hover {
+
+.navbar__menu--hover {
+  flex: 1;
+  text-align: center;
+}
+.navbar__menu--hover:hover {
   border-bottom: 0.25rem solid #FFFFFF;
 }
 
 .button {
   font-family: "Avenir", sans-serif;
+  text-decoration: none;
   font-size: 0.625rem;
   color: #FFFFFF;
   font-weight: 400;
-  display: flex;
+}
+.button:hover {
+  font-weight: 700;
 }
 
 .button a {
   text-decoration: none;
-  color: inherit;
 }
 
 /*.hovering:hover + button {

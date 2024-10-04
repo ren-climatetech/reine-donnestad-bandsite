@@ -17,38 +17,41 @@
 }
 
 .navbar__menu{
-  background-color: $BandSite-Black;
   display: flex;
   justify-content: space-around;
+  background-color: $BandSite-Black;
   margin:0;
   padding:$padding16px;
-
-
-  &:hover {
-  border-bottom: .25rem solid $White; 
 }
 
+.navbar__menu--hover{
+  display: flex;
+  justify-content: space-around;
+  flex:1;
+  text-align: center;
+
+&:hover {
+  border-bottom: .25rem solid $White; 
+}
 }
 
 .button{
   font-family:"Avenir", sans-serif;
+  text-decoration: none;
   font-size: .625rem;
   color: $White;
   font-weight: 400;
-  display: flex;
- 
+  
+  &:hover {
+    font-weight:  700; 
 }
+}
+
 .button a {
   text-decoration: none;
-  color: inherit;
+
 }
 
-
-/*.hovering:hover + button {
-  font-weight: 600;
-  border-bottom: .25rem solid $White; 
-}*/
-  
 .pageheader{
   background-image: url('/assets/images/hero-bio.jpg');
   opacity: 80%;
@@ -88,6 +91,7 @@
   font-weight: 700;
   padding: $padding16px;
 }
+
 .bodyheader{
   font-family:"Avenir", sans-serif;
   font-size: .8125rem;

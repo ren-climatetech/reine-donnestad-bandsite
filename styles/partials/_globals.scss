@@ -2,13 +2,79 @@
 @use "./mixins" as *;
 @use "./typography" as *;
 
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
+@mixin padding-16 {
+    padding-top: $padding24px;
+    padding-left: $padding-16;
+    padding-right: $padding-16;
+    padding-bottom: $padding-16;
+  } /*this never worked for me*/
+
+body {
+    font-family:"Avenir", sans-serif; 
+    margin: 0;
 }
 
-body{
-    font-family:"Avenir", sans-serif;  /*unsure about this*/
+main {
     margin: 0;
+}
+
+h1{
+    font-size: $font24px;
+    font-weight: 600;
+
+    @include tablet {
+        font-size: $font32px;
+    }
+}
+
+h2{
+    font-size: $font24px;
+    font-weight: 600;
+    margin:0;
+    padding-top: $padding24px;
+    @include padding-16;
+
+    @include tablet {
+        font-size: $font32px;
+    }
+}
+
+h3{
+    font-size: $font24px;
+    font-weight: 400;
+
+    @include tablet {
+        font-size: $font32px;
+    }
+}
+p {
+    font-size: $font18px;
+    font-weight: 400;
+    margin: 0;
+
+    @include tablet {
+        font-size: $font24px;
+    }
+}
+
+.button{
+    font-size: $font14px;
+    font-weight: 400;
+
+    @include tablet {
+        font-size: $font16px;
+    }
+
+}
+
+.quote{
+    font-size: $font18px;
+    line-height: $lineheight32px;
+    font-weight: 600;
+    @include padding-16;
+
+    @include tablet {
+        font-size: $font24px;
+        margin: 0 10%;
+}
 }

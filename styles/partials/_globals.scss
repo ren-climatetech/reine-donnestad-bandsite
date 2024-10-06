@@ -3,11 +3,19 @@
 @use "./typography" as *;
 
 @mixin padding-16 {
-    padding-top: $padding24px;
+    padding-top: $padding-24;
     padding-left: $padding-16;
     padding-right: $padding-16;
     padding-bottom: $padding-16;
-  } /*this never worked for me*/
+  } 
+
+@mixin padding-36 {
+    padding-top: $padding-48;
+    padding-left: $padding-36;
+    padding-right: $padding-36;
+    padding-bottom: $padding-36;
+}
+
 
 body {
     font-family:"Avenir", sans-serif; 
@@ -19,62 +27,70 @@ main {
 }
 
 h1{
-    font-size: $font24px;
+    font-size: $font-24;
     font-weight: 600;
 
     @include tablet {
-        font-size: $font32px;
+        font-size: $font-60;
+    }
+
+    @include desktop {
+        font-size: $font-60;
     }
 }
 
 h2{
-    font-size: $font24px;
+    font-size: $font-24;
     font-weight: 600;
     margin:0;
-    padding-top: $padding24px;
+    padding-top: $padding-24;
     @include padding-16;
 
     @include tablet {
-        font-size: $font32px;
+        font-size: $font-32;
+        @include padding-36;
     }
 }
 
 h3{
-    font-size: $font24px;
+    font-size: $font-24;
     font-weight: 400;
 
     @include tablet {
-        font-size: $font32px;
+        font-size: $font-32;
     }
 }
 p {
-    font-size: $font18px;
+    font-size: $font-14;
     font-weight: 400;
     margin: 0;
 
     @include tablet {
-        font-size: $font24px;
+        font-size: $font-16;
     }
+
+
 }
 
 .button{
-    font-size: $font14px;
+    font-size: $font-14;
     font-weight: 400;
 
     @include tablet {
-        font-size: $font16px;
+        font-size: $font-16;
     }
 
 }
 
-.quote{
-    font-size: $font18px;
-    line-height: $lineheight32px;
+.quote {
+    font-size: $font-18;
+    line-height: $line-height-32;
     font-weight: 600;
     @include padding-16;
 
     @include tablet {
-        font-size: $font24px;
+        font-size: $font-24;
         margin: 0 10%;
-}
+        @include padding-36;
+    }
 }

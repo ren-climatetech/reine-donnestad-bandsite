@@ -121,6 +121,8 @@
 .body__header{
   display:flex;
   padding-left: $padding-16;
+  padding-bottom: 0;
+
   @include tablet {
     margin: 0 10%;
 }
@@ -189,7 +191,7 @@
   padding-bottom: $padding-16;
 
   @include tablet{
-    flex: 1 0 30%;
+    flex: 1 1 20%;
     min-width:22vw;
     padding-right:$padding-36;
     
@@ -198,6 +200,7 @@
 
 .label{
   padding-left: $padding-16;
+  font-size: 1.5rem;
 }
 
 
@@ -211,6 +214,8 @@
 .footer__container{
   @include tablet{
   display: flex;
+  justify-content: space-between;
+  flex:1;
   }
   @include desktop{
     margin: 0 10%;
@@ -218,17 +223,25 @@
 }
 .footer__header{
   padding-left: $padding-16;
+  align-items: center;
+  @include tablet{
+    flex-basis:100%;
+  }
 }
 
-.container__links{
+.footer__container--links{
   display: flex;
   align-items: center;
+  @include tablet{
+    flex-basis:100%;
+    justify-content: center;
+  }
 }
 
 .contact__icon{
   display: flex;
   padding: $padding-16;
-  height:5vw;
+  height:3vw;
 }
 
 .footer__hidden-1{
@@ -236,8 +249,7 @@
 
   @include tablet{
     display: flex;
-    margin-left: 25%;
-    
+    justify-content: right;
   }
 }
 .contact__copy{

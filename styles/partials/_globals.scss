@@ -63,6 +63,7 @@ h3{
 p {
     font-size: $font-14;
     font-weight: 400;
+    line-height: $line-height-24;
     margin: 0;
 
     @include tablet {

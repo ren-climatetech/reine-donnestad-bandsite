@@ -1,0 +1,290 @@
+@use "./partials/globals" as *;
+@use "./partials/mixins" as *;
+@use "./partials/variables" as *;
+@use "./partials/typography" as *;
+
+.nav {
+  @include tablet{
+    display:flex;
+    background-color: $BandSite-Black;
+  }
+}
+
+
+.subheader{
+  background-color: $BandSite-Black;
+  color: $White;
+  display: flex;
+  justify-content: center;
+  padding: $padding-16;
+  padding-bottom: 0;
+  margin:0;
+
+  @include tablet {
+    padding-bottom: $padding-16;
+  }
+}
+
+.navbar__menu{
+  display: flex;
+  justify-content: space-around;
+  background-color: $BandSite-Black;
+}
+
+.navbar__menu--hover{
+  display: flex;
+  align-items: center; 
+  justify-content: space-around;
+  flex:1;
+  text-align: center;
+
+  padding: $padding-16;
+
+&:hover {
+  border-bottom: .25rem solid $White; 
+}
+}
+
+.button{
+  text-decoration: none;
+  color: $White;
+
+  &:hover {
+    font-weight:  700; 
+}
+}
+
+.button a {
+  text-decoration: none;
+
+}
+.nav__button{
+  vertical-align: middle;
+}
+
+.pageheader{
+  background-image: url('/assets/images/hero-bio.jpg');
+  background-size: cover;
+  display:flex;
+  position: relative;
+  width:100%;
+  height: 60vw;
+}
+
+.overlay {
+  display: flex;
+  position: absolute;
+  width:100%;
+  height:100%;
+  background-color: $BandSite-Black;
+  opacity: 50%;
+}
+
+.pageheader__title{
+  display: flex;
+  z-index: 1;
+  align-items: center;
+  color: $White;
+  @include padding-16;
+
+  @include tablet {
+    @include padding-36;
+    margin: 0 10%;
+  }
+}
+
+.section__header{
+  padding: $padding-16;
+  margin:0;
+  padding-top: $padding-32;
+}
+
+.image__container{
+  position: relative;
+  max-width: 100vw;
+  
+  @include tablet {
+    margin: 0 10%;
+}
+}
+
+.image__band{
+  object-fit:contain;
+  width:100%;
+  height: auto;
+  min-width:80vw;
+  padding-left: $padding-16;
+  padding-right: $padding-16;
+}
+
+
+.body__header{
+  display:flex;
+  padding-left: $padding-16;
+  padding-bottom: 0;
+
+  @include tablet {
+    margin: 0 10%;
+}
+}
+
+.body__container{
+  display: flex;
+  flex-direction: column; 
+
+  @include tablet{
+    flex-direction: row;
+    margin: 0 10%;
+  }
+}
+
+.body__copy{
+  flex: 1;
+  @include padding-16;
+
+  @include tablet{
+    display: flex;
+    flex-flow: row wrap;
+
+}
+}
+
+.section_nav{
+  background-color: $BandSite-Black;
+  color: $White;
+}
+
+.section__about{
+  background-color: $White;
+  color: $BandSite-Black;
+ 
+}
+
+.gallery{
+  background-color: $Alabaster;
+  @include padding-16;
+}
+
+.section__header{
+  color: $BandSite-Black;
+
+  @include desktop {
+    margin: 0 10%;
+}
+}
+
+.gallery__container{
+  @include tablet{
+    display:flex;
+    flex-flow: row wrap;
+  }
+
+  @include desktop{
+    margin: 0 10%;
+  }
+}
+
+.image__gallery{
+  position: relative;
+  width:100%;
+  height: auto;
+  padding-bottom: $padding-16;
+
+  @include tablet{
+    flex: 1 1 20%;
+    min-width:22vw;
+    padding-right:$padding-36;
+    
+  }
+}
+
+.label{
+  padding-left: $padding-16;
+  font-size: 1.5rem;
+}
+
+
+.footer{
+  background-color: $BandSite-Black;
+  color: $White;
+  padding-top: $padding-16;
+  padding-left: $padding-16;
+
+}
+.footer__container{
+  @include tablet{
+  display: flex;
+  justify-content: space-between;
+  flex:1;
+  }
+  @include desktop{
+    margin: 0 10%;
+    }
+}
+.footer__header{
+  padding-left: $padding-16;
+  align-items: center;
+  @include tablet{
+    flex-basis:100%;
+  }
+}
+
+.footer__container--links{
+  display: flex;
+  align-items: center;
+  @include tablet{
+    flex-basis:100%;
+    justify-content: center;
+  }
+}
+
+.contact__icon{
+  display: flex;
+  padding: $padding-16;
+  height:3vw;
+}
+
+.footer__hidden-1{
+  display: none;
+
+  @include tablet{
+    display: flex;
+    justify-content: right;
+  }
+}
+.contact__copy{
+  @include padding-16;
+
+}
+.contact__container{
+  @include tablet {
+  display: flex;
+  justify-content: space-between;
+  }
+
+  @include desktop{
+    margin: 0 10%;
+    }
+}
+
+.footer__header{
+  padding-left: $padding-16;
+}
+
+.footer__copy{
+  @include padding-16;
+
+  @include desktop{
+    padding-top: $padding-36;
+    padding-bottom: $padding-48;
+    margin: 0 10%;
+  }
+  
+}
+
+.footer__hidden-2{
+  @include tablet{
+    display:none;
+  }
+
+}

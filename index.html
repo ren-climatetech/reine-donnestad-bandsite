@@ -5,12 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="./styles/bio.css" />
-    <!-- link to add script for java-->
+    <script src="./styles/index-page.js" defer></script>
   </head>
 
   <body>
     <section class="nav">
-      <h3 class="subheader"> <a href="#biography" class="subheader__link"></a>BANDSITE</h3>
+      <a  href="#linktobio">
+        <img class="logo"
+          src="/assets/logos/Logo-bandsite.svg"
+          alt="bandsite-logo"
+      /></a>
+      <!-- <h3 class="subheader"> <a href="#biography" class="subheader__link"></a>BANDSITE</h3> -->
 
       <nav class="navbar__menu">
         <div class="navbar__menu--hover">
@@ -24,7 +29,7 @@
 
     <div class="pageheader">
       <div class="overlay"></div>
-      <h1 class="pageheader__title">The Bees Knees</h1>
+      <h1 class="pageheader__content">The Bees Knees</h1>
     </div>
 
     <section class="section__about">
@@ -116,43 +121,48 @@
 
     <section>
       <h2>Join the Conversation</h2>
-      <div>
-      <label for="userName">Name</label> 
+      <form class="comment__forum">
+      <label for="userName">NAME</label> 
       <br/>
-      <input type="text" name="userName"></div>
-      <div>
-        <label for="Comment">Comment</label>
+      <input type="text" id="nameInput" name="userName">
+      <br/>
+        <label for="Comment">COMMENT</label>
         <br/>
-      <textarea name="Comment"></textarea></div>
+      <textarea id="inputComment" name="Comment"></textarea></form>
       <button type="submit">Comment</button>
+      <div class="comment__forum--result"></div>
     </section>
 
     <footer class="footer">
       <div class="footer__container">
-        <h2 class="footer__header">Get In Touch</h2>
+        <h2>Get In Touch</h2>
 
         <div class="footer__container--links">
           <a href="https://instagram.com" target="blank">
             <img
-              class="contact__icon"
+              class="footer__icon"
               src="/assets/icons/Icon-instagram.svg"
               alt="instagram"
           /></a>
           <a href="https://www.facebook.com" target="blank">
             <img
-              class="contact__icon"
+              class="footer__icon"
               src="/assets/icons/Icon-facebook.svg"
               alt="facebook"
           /></a>
           <a href="https://x.com" target="blank">
             <img
-              class="contact__icon"
+              class="footer__icon"
               src="/assets/icons/Icon-twitter.svg"
               alt="twitter"
           /></a>
         </div>
-
-        <h3 class="footer__header footer__hidden-1">BANDSITE</h3>
+        <a  href="#linktobio">
+          <img class="footer__logo footer__logo--hidden1"
+            src="/assets/logos/Logo-bandsite.svg"
+            alt="bandsite-logo"
+        /></a>
+        <!-- <h3 class="footer__header footer__hidden-1">BANDSITE</h3> -->
 
       </div>
 
@@ -179,7 +189,14 @@
           <p class="contact__copy">bookings@archentertainment.com</p>
         </div>
       </div>
-      <h3 class="footer__header footer__hidden-2">BANDSITE</h3>
+    
+        <a  href="#linktobio">
+          <img class="footer__logo footer__logo-hidden2"
+            src="/assets/logos/Logo-bandsite.svg"
+            alt="bandsite-logo"
+        /></a>
+      <!-- <h3 class="footer__header footer__hidden-2">BANDSITE</h3> -->
+    
       <p class="footer__copy">
         Copyright The Bees Knees © 2023 All Rights Reserved
       </p>

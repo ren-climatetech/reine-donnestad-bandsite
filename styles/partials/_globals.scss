@@ -44,21 +44,22 @@ h2{
     font-weight: 600;
     margin:0;
     padding-top: $padding-24;
-    @include padding-16;
+    padding-left: $padding-16;
+ 
 
     @include tablet {
         font-size: $font-32;
-        @include padding-36;
     }
 }
 
 h3{
     font-size: $font-24;
-    font-weight: 400;
+    font-weight: 600;
 
     @include tablet {
         font-size: $font-32;
     }
+
 }
 p {
     font-size: $font-14;
@@ -95,3 +96,69 @@ p {
         @include padding-36;
     }
 }
+
+.footer{
+    background-color: $BandSite-Black;
+    color: $White;
+    display: flex;
+    flex-direction: column;
+  
+    &__logo{
+      align-items: center;
+      padding: $padding-16;
+      @include tablet{
+        flex-basis:100%;
+      }
+    }
+  
+    &__container{
+      @include tablet{
+      display: flex;
+      justify-content: space-between;
+      flex:1;
+  
+      }
+      @include desktop{
+        margin: 0 10%;
+        }
+    }
+  
+    &__container--links{
+      display: flex;
+      align-items: center;
+      @include tablet{
+        flex-basis:auto;
+        justify-content: center;
+      }
+    }
+
+    &__icon{
+        display: flex;
+        padding: $padding-16;
+        height:3rem;
+    }
+    
+    &__copy{
+      @include padding-16;
+    
+      @include desktop{
+        padding-top: $padding-36;
+        padding-bottom: $padding-48;
+        margin: 0 10%;
+      }
+    }
+    
+    &__hidden-1{  
+      display: none;
+  
+      @include tablet{
+        display: flex;
+        justify-content: right;
+      }
+    }
+    &__hidden-2{
+      @include tablet{
+        display:none;
+      }
+    }
+  }

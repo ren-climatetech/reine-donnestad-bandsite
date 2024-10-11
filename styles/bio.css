@@ -17,6 +17,54 @@
   src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf") format("opentype"), url("../../assets/fonts/Alternative files/AvenirNextLTProBold.ttf") format("truetype");
   font-weight: 700;
 }
+@media screen and (min-width: 768px) {
+  .nav {
+    display: flex;
+    background-color: #323232;
+  }
+}
+.nav__logo {
+  background-color: #323232;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  height: 2rem;
+  margin: 0;
+}
+@media screen and (min-width: 768px) {
+  .nav__logo {
+    padding-bottom: 1rem;
+  }
+}
+.nav__menu {
+  display: flex;
+  justify-content: space-around;
+  background-color: #323232;
+}
+.nav__menu--hover {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex: 1;
+  text-align: center;
+  padding: 1rem;
+}
+.nav__menu--hover:hover {
+  border-bottom: 0.25rem solid #FFFFFF;
+}
+.nav__button {
+  text-decoration: none;
+  vertical-align: middle;
+  color: #FFFFFF;
+}
+.nav__button:hover {
+  font-weight: 700;
+}
+.nav__button a {
+  text-decoration: none;
+}
+
 body {
   font-family: "Avenir", sans-serif;
   margin: 0;
@@ -32,12 +80,7 @@ h1 {
 }
 @media screen and (min-width: 768px) {
   h1 {
-    font-size: 3.75rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  h1 {
-    font-size: 3.75rem;
+    font-size: 4.5rem;
   }
 }
 
@@ -45,8 +88,6 @@ h2 {
   font-size: 1.5rem;
   font-weight: 600;
   margin: 0;
-  padding-top: 1.5rem;
-  padding-left: 1rem;
 }
 @media screen and (min-width: 768px) {
   h2 {
@@ -111,10 +152,11 @@ p {
   color: #FFFFFF;
   display: flex;
   flex-direction: column;
+  padding-top: 1rem;
 }
 .footer__logo {
   align-items: center;
-  padding: 1rem;
+  vertical-align: middle;
 }
 @media screen and (min-width: 768px) {
   .footer__logo {
@@ -140,19 +182,14 @@ p {
 @media screen and (min-width: 768px) {
   .footer__container--links {
     flex-basis: auto;
-    justify-content: center;
+    justify-content: space-between;
   }
 }
 .footer__icon {
-  display: flex;
-  padding: 1rem;
+  justify-content: space-between;
+  margin-top: 1rem;
+  margin-right: 2rem;
   height: 3rem;
-}
-.footer__copy {
-  padding-top: 1.5rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-bottom: 1rem;
 }
 @media screen and (min-width: 1280px) {
   .footer__copy {
@@ -161,75 +198,38 @@ p {
     margin: 0 10%;
   }
 }
-.footer__hidden-1 {
+.footer__logo--hidden1 {
   display: none;
 }
 @media screen and (min-width: 768px) {
-  .footer__hidden-1 {
+  .footer__logo--hidden1 {
     display: flex;
-    justify-content: right;
+    margin-right: 0;
   }
 }
 @media screen and (min-width: 768px) {
-  .footer__hidden-2 {
+  .footer__logo--hidden2 {
     display: none;
   }
 }
 
+.contact__label {
+  font-size: 1.5rem;
+}
+.contact__copy {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
 @media screen and (min-width: 768px) {
-  .nav {
+  .contact {
     display: flex;
-    background-color: #323232;
+    justify-content: space-between;
   }
 }
-
-.logo {
-  background-color: #323232;
-  color: #FFFFFF;
-  display: flex;
-  justify-content: center;
-  padding: 1rem;
-  padding-bottom: 0;
-  margin: 0;
-}
-@media screen and (min-width: 768px) {
-  .logo {
-    padding-bottom: 1rem;
+@media screen and (min-width: 1280px) {
+  .contact {
+    margin: 0 10%;
   }
-}
-
-.navbar__menu {
-  display: flex;
-  justify-content: space-around;
-  background-color: #323232;
-}
-
-.navbar__menu--hover {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex: 1;
-  text-align: center;
-  padding: 1rem;
-}
-.navbar__menu--hover:hover {
-  border-bottom: 0.25rem solid #FFFFFF;
-}
-
-.button {
-  text-decoration: none;
-  color: #FFFFFF;
-}
-.button:hover {
-  font-weight: 700;
-}
-
-.button a {
-  text-decoration: none;
-}
-
-.nav__button {
-  vertical-align: middle;
 }
 
 .pageheader {
@@ -384,23 +384,32 @@ p {
   }
 }
 
-.label {
-  font-size: 1.5rem;
+.commentforum {
+  margin: 0;
+  padding: 1rem;
+  box-sizing: border-box;
 }
-
-.contact__copy {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+.commentforum__label {
+  color: #AFAFAF;
+  font-size: 1.125rem;
+  font-weight: 600;
 }
-
-@media screen and (min-width: 768px) {
-  .contact__container {
-    display: flex;
-    justify-content: space-between;
-  }
+.commentforum__input {
+  color: #323232;
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-weight: 400;
+  background-color: #FAFAFA;
+  border: 0.125rem solid #AFAFAF;
+  border-radius: 0.5rem;
 }
-@media screen and (min-width: 1280px) {
-  .contact__container {
-    margin: 0 10%;
-  }
+.commentforum__button {
+  color: #FAFAFA;
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  background-color: #323232;
+  border: 0.125rem solid #AFAFAF;
+  border-radius: 0.5rem;
+  width: 100%;
 }/*# sourceMappingURL=bio.css.map */

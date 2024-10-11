@@ -3,64 +3,6 @@
 @use "./partials/variables" as *;
 @use "./partials/typography" as *;
 
-.nav {
-  @include tablet{
-    display:flex;
-    background-color: $BandSite-Black;
-  }
-}
-
-
-.logo{
-  background-color: $BandSite-Black;
-  color: $White;
-  display: flex;
-  justify-content: center;
-  padding: $padding-16;
-  padding-bottom: 0;
-  margin:0;
-
-  @include tablet {
-    padding-bottom: $padding-16;
-  }
-}
-
-.navbar__menu{
-  display: flex;
-  justify-content: space-around;
-  background-color: $BandSite-Black;
-}
-
-.navbar__menu--hover{
-  display: flex;
-  align-items: center; 
-  justify-content: space-around;
-  flex:1;
-  text-align: center;
-
-  padding: $padding-16;
-
-&:hover {
-  border-bottom: .25rem solid $White; 
-}
-}
-
-.button{
-  text-decoration: none;
-  color: $White;
-
-  &:hover {
-    font-weight:  700; 
-}
-}
-
-.button a {
-  text-decoration: none;
-
-}
-.nav__button{
-  vertical-align: middle;
-}
 
 .pageheader{
   background-image: url('/assets/images/hero-bio.jpg');
@@ -199,25 +141,61 @@
   }
 }
 
-.label{
-  font-size: 1.5rem;
-}
+.commentforum{
+  margin:0;
+  padding:$padding-16;
+  box-sizing: border-box;
 
-
-.contact__copy{
-  padding-top: $padding-16;
-  padding-bottom: $padding-16;
-}
-
-.contact__container{
-  @include tablet {
-  display: flex;
-  justify-content: space-between;
+  &__label{
+    color:$Silver;
+    font-size: $font-18;
+    font-weight: 600;
   }
 
-  @include desktop{
-    margin: 0 10%;
-    }
+  &__input{
+    color: $BandSite-Black;
+    padding: .5rem;
+    font-size: $font-16;
+    font-weight: 400;
+    background-color: $Alabaster;
+    border: .125rem solid $Silver;
+    border-radius: .5rem;
+  }
+
+  &__button{
+    color: $Alabaster;
+    padding: $padding-12;
+    font-size: $font-16;
+    font-weight: 400;
+    background-color: $BandSite-Black;
+    border: .125rem solid $Silver;
+    border-radius: .5rem;
+    width: 100%; 
+
+  }
 }
+
+
+
+
+// .contact{
+//   &__label{
+//     font-size: 1.5rem;
+//   }
+  
+//   &__copy{
+//     padding-top: $padding-16;
+//     padding-bottom: $padding-16;
+//   }
+
+//   @include tablet {
+//   display: flex;
+//   justify-content: space-between;
+//   }
+
+//   @include desktop{
+//     margin: 0 10%;
+//     }
+// }
 
 

@@ -10,37 +10,45 @@
 
   <body>
     <section class="nav">
-      <a  href="#linktobio">
-        <img class="logo"
+      <a class="nav__logo" href="index.html">
+        <img 
           src="/assets/logos/Logo-bandsite.svg"
           alt="bandsite-logo"
       /></a>
-      <!-- <h3 class="subheader">
-        <a href="#biography" class="subheader__link"></a>BANDSITE
-      </h3> -->
-
-      <nav class="navbar__menu">
-        <div class="navbar__menu--hover">
-          <div><a class="button" href="default.asp">Biography</a></div>
+    
+      <nav class="nav__menu">
+        <div class="nav__menu--hover">
+          <div><a class="nav__button" href="default.asp">Biography</a></div>
         </div>
-        <div class="navbar__menu--hover">
-          <div><a class="button" href="shows.asp">Shows</a></div>
+        <div class="nav__menu--hover">
+          <div><a class="nav__button" href="shows.asp">Shows</a></div>
         </div>
       </nav>
     </section>
 
     <div class="pageheader">
-      <div class="overlay"></div>
+      <div class="pageheader__overlay"></div>
+      
       <h3 class="pageheader__title">Beautiful Beasts Album</h3>
       <br/>
+      
       <h1 class="pageheader__content">Stripes of Yellow x For The Stings</h1>
-      <iframe class="pageheader__song" width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/250861115&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
-
-      <!-- <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/r-d-105" title="R▲D" target="_blank" style="color: #cccccc; text-decoration: none;">R▲D</a> · <a href="https://soundcloud.com/r-d-105/afloat" title="afloat" target="_blank" style="color: #cccccc; text-decoration: none;">afloat</a></div> -->
+      <div class="pageheader__song">
+      <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/250861115&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+    </div>
   </div>
 
     <main>
-      <h1>Shows</h1>
+      <h1 class="shows">Shows</p>
+        
+      <div class="shows__container">
+      <p class="shows__header">DATE</p>
+      <p class="shows__date">Mon Sept 09 2024</p>
+      <p class="shows__header">VENUE</p>
+      <p class="shows__location">Ronald Lane</p>
+      <p class="shows__header">VENU</p>
+      <p class="shows__location">San Francisco, CA</p>
+
     </main>
 
     <footer class="footer">
@@ -67,17 +75,18 @@
               alt="twitter"
           /></a>
         </div>
-        <a  href="#linktobio">
-          <img class="footer__logo footer__logo--hidden1"
+
+        <a href="#linktobio">
+          <img
+            class="footer__logo footer__logo--hidden1"
             src="/assets/logos/Logo-bandsite.svg"
             alt="bandsite-logo"
         /></a>
-
       </div>
 
-      <div class="contact__container">
+      <div class="contact">
         <div>
-          <h3 class="label">The Bees Knees Management</h3>
+          <h3 class="contact__label">The Bees Knees Management</h3>
           <p class="contact__copy">
             503 Broadway Penthouse, <br />New York, NY 10012, USA
           </p>
@@ -85,7 +94,7 @@
         </div>
 
         <div>
-          <h3 class="label">Limitless Artist Group</h3>
+          <h3 class="contact__label">Limitless Artist Group</h3>
           <p class="contact__copy">
             Booking Agent for <br />US / South America / Japan
           </p>
@@ -93,19 +102,19 @@
         </div>
 
         <div>
-          <h3 class="label">ARCH Entertainment</h3>
+          <h3 class="contact__label">ARCH Entertainment</h3>
           <p class="contact__copy">Booking Agent for <br />UK / EU / AU</p>
           <p class="contact__copy">bookings@archentertainment.com</p>
         </div>
       </div>
-    
-        <a  href="#linktobio">
-          <img class="footer__logo footer__logo-hidden2"
-            src="/assets/logos/Logo-bandsite.svg"
-            alt="bandsite-logo"
-        /></a>
-      <!-- <h3 class="footer__header footer__hidden-2">BANDSITE</h3> -->
-    
+
+      <a href="#linktobio">
+        <img
+          class="footer__logo footer__logo--hidden2"
+          src="/assets/logos/Logo-bandsite.svg"
+          alt="bandsite-logo"
+      /></a>
+
       <p class="footer__copy">
         Copyright The Bees Knees © 2023 All Rights Reserved
       </p>

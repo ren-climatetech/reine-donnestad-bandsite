@@ -3,73 +3,25 @@
 @use "./partials/variables" as *;
 @use "./partials/typography" as *;
 
-.nav {
-  @include tablet{
-    display:flex;
-    background-color: $BandSite-Black;
-  }
-}
 
-
-.logo{
-  background-color: $BandSite-Black;
-  color: $White;
-  display: flex;
-  justify-content: center;
-  padding: $padding-16;
-  padding-bottom: 0;
-  margin:0;
-
-  @include tablet {
-    padding-bottom: $padding-16;
-  }
-}
-
-.navbar__menu{
-  display: flex;
-  justify-content: space-around;
-  background-color: $BandSite-Black;
-}
-
-.navbar__menu--hover{
-  display: flex;
-  align-items: center; 
-  justify-content: space-around;
-  flex:1;
-  text-align: center;
-
-  padding: $padding-16;
-
-&:hover {
-  border-bottom: .25rem solid $White; 
-}
-}
-
-.button{
-  text-decoration: none;
-  color: $White;
-
-  &:hover {
-    font-weight:  700; 
-}
-}
-
-.button a {
-  text-decoration: none;
-
-}
-.nav__button{
-  vertical-align: middle;
-}
 
 .pageheader{
-  background-image: url('/assets/images/hero-bio.jpg');
+  background-image: url('/assets/images/hero-shows.jpg');
   background-size: cover;
   display:flex;
   flex-direction: column;
   position: relative;
   width:100%;
   height: 60vw;
+
+  &__overlay {
+    display: flex;
+    position: absolute;
+    width:100%;
+    height:100%;
+    background-color: $BandSite-Black;
+    opacity: 50%;
+  }  
 
   &__title{
     display: flex;
@@ -86,8 +38,8 @@
 
   &__content{
     display: flex;
+    flex-direction: column;
     z-index: 1;
-    align-items: center;
     color: $White;
     @include padding-16;
   
@@ -99,8 +51,10 @@
 
   &__song{
     display: flex;
+    flex-direction: column;
     z-index: 1;
-    width: 80%;
+    max-width: 30vw; 
+    max-height: 5vh;//this is not fixing the issue
     @include padding-16;
 
     @include tablet {
@@ -111,139 +65,26 @@
   }
 }
 
-
-.overlay {
-  display: flex;
-  position: absolute;
-  width:100%;
-  height:100%;
-  background-color: $BandSite-Black;
-  opacity: 50%;
+.shows__container{
+  border-bottom-width: 1rem;
+  border-color: gray;
 }
 
-
-.section__header{
-  padding: $padding-16;
-  margin:0;
-  padding-top: $padding-32;
+.shows__header{
+  font-size: $padding-16;
+  color: grey;
+  font-weight: 600;
+  font-size: $font-18;
 }
-
-.image__container{
-  position: relative;
-  max-width: 100vw;
-  
-  @include tablet {
-    margin: 0 10%;
-}
-}
-
-.image__band{
-  object-fit:contain;
-  width:100%;
-  height: auto;
-  min-width:80vw;
-  padding-left: $padding-16;
-  padding-right: $padding-16;
-}
-
-
-.body__header{
-  display:flex;
-  padding-left: $padding-16;
-  padding-bottom: 0;
-
-  @include tablet {
-    margin: 0 10%;
-}
-}
-
-.body__container{
-  display: flex;
-  flex-direction: column; 
-
-  @include tablet{
-    flex-direction: row;
-    margin: 0 10%;
-  }
-}
-
-.body__copy{
-  flex: 1;
-  @include padding-16;
-
-  @include tablet{
-    display: flex;
-    flex-flow: row wrap;
-
-}
-}
-
-.section_nav{
-  background-color: $BandSite-Black;
-  color: $White;
-}
-
-.section__about{
-  background-color: $White;
+.shows__date{
+  font-size: $font-24;
   color: $BandSite-Black;
- 
+  font-weight: 600;
 }
 
-.gallery{
-  background-color: $Alabaster;
-  @include padding-16;
-}
-
-.section__header{
+.shows__location{
+  font-size: $font-24;
   color: $BandSite-Black;
 
-  @include desktop {
-    margin: 0 10%;
-}
 }
 
-.gallery__container{
-  @include tablet{
-    display:flex;
-    flex-flow: row wrap;
-  }
-
-  @include desktop{
-    margin: 0 10%;
-  }
-}
-
-.image__gallery{
-  position: relative;
-  width:100%;
-  height: auto;
-  padding-bottom: $padding-16;
-
-  @include tablet{
-    flex: 1 1 20%;
-    min-width:22vw;
-    padding-right:$padding-36;
-    
-  }
-}
-
-.label{
-  padding-left: $padding-16;
-  font-size: 1.5rem;
-}
-
-
-.contact__copy{
-  @include padding-16;
-
-}
-.contact__container{
-  @include tablet {
-  display: flex;
-  justify-content: space-between;
-  }
-
-  @include desktop{
-    margin: 0 10%;
-    }
-}

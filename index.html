@@ -5,24 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="./styles/bio.css" />
-    <script src="./styles/index-page.js" defer></script>
+    <script src="./scripts/index-page.js" defer></script>
   </head>
 
   <body>
     <section class="nav">
-      <a  href="#linktobio">
-        <img class="logo"
+      <a class="nav__logo" href="index.html">
+        <img 
           src="/assets/logos/Logo-bandsite.svg"
           alt="bandsite-logo"
       /></a>
-      <!-- <h3 class="subheader"> <a href="#biography" class="subheader__link"></a>BANDSITE</h3> -->
-
-      <nav class="navbar__menu">
-        <div class="navbar__menu--hover">
-          <div><a class="button" href="default.asp">Biography</a></div>
+    
+      <nav class="nav__menu">
+        <div class="nav__menu--hover">
+          <div><a class="nav__button" href="default.asp">Biography</a></div>
         </div>
-        <div class="navbar__menu--hover">
-          <div><a class="button" href="shows.asp">Shows</a></div>
+        <div class="nav__menu--hover">
+          <div><a class="nav__button" href="shows.asp">Shows</a></div>
         </div>
       </nav>
     </section>
@@ -117,22 +116,29 @@
           alt="photo-9"
         />
       </section>
-    </main>
+    
+    <section class="comment">
+      <h2 class="comment__header">Join the Conversation</h2>
 
-    <section>
-      <h2>Join the Conversation</h2>
-      <form class="comment__forum">
-      <label for="userName">NAME</label> 
-      <br/>
-      <input type="text" id="nameInput" name="userName">
-      <br/>
-        <label for="Comment">COMMENT</label>
-        <br/>
-      <textarea id="inputComment" name="Comment"></textarea></form>
-      <button type="submit">Comment</button>
-      <div class="comment__forum--result"></div>
+      <form class="commentforum" id="commentForm" autocomplete="on">
+        <label for="inputName" class="commentforum__label">NAME</label>
+        <input class="commentforum__input" placeholder="Enter your name" type="text" id="inputName" name="userName" required />
+        <div></div><label for="inputComment" class="commentforum__label">COMMENT</label><br />
+        <textarea class="commentforum__input" placeholder="Add a new comment" id="inputComment" name="Comment" required ></textarea>
+      </div>
+        <button class="commentforum__button" type="submit">COMMENT</button>
+        <div id="outputEntry"></div>
+      </form>
+
+      <article class="comment__card"> 
+        <p class="comment__card--name"></p>
+        <span class="comment__card--date"> </span>
+        <div class="comment__card--comment"></div>
+      </p>
+      </article>
     </section>
 
+  </main>
     <footer class="footer">
       <div class="footer__container">
         <h2>Get In Touch</h2>
@@ -157,18 +163,18 @@
               alt="twitter"
           /></a>
         </div>
-        <a  href="#linktobio">
-          <img class="footer__logo footer__logo--hidden1"
+
+        <a href="#linktobio">
+          <img
+            class="footer__logo footer__logo--hidden1"
             src="/assets/logos/Logo-bandsite.svg"
             alt="bandsite-logo"
         /></a>
-        <!-- <h3 class="footer__header footer__hidden-1">BANDSITE</h3> -->
-
       </div>
 
-      <div class="contact__container">
+      <div class="contact">
         <div>
-          <h3 class="label">The Bees Knees Management</h3>
+          <h3 class="contact__label">The Bees Knees Management</h3>
           <p class="contact__copy">
             503 Broadway Penthouse, <br />New York, NY 10012, USA
           </p>
@@ -176,7 +182,7 @@
         </div>
 
         <div>
-          <h3 class="label">Limitless Artist Group</h3>
+          <h3 class="contact__label">Limitless Artist Group</h3>
           <p class="contact__copy">
             Booking Agent for <br />US / South America / Japan
           </p>
@@ -184,22 +190,24 @@
         </div>
 
         <div>
-          <h3 class="label">ARCH Entertainment</h3>
+          <h3 class="contact__label">ARCH Entertainment</h3>
           <p class="contact__copy">Booking Agent for <br />UK / EU / AU</p>
           <p class="contact__copy">bookings@archentertainment.com</p>
         </div>
       </div>
-    
-        <a  href="#linktobio">
-          <img class="footer__logo footer__logo-hidden2"
-            src="/assets/logos/Logo-bandsite.svg"
-            alt="bandsite-logo"
-        /></a>
-      <!-- <h3 class="footer__header footer__hidden-2">BANDSITE</h3> -->
-    
+
+      <a href="#linktobio">
+        <img
+          class="footer__logo footer__logo--hidden2"
+          src="/assets/logos/Logo-bandsite.svg"
+          alt="bandsite-logo"
+      /></a>
+
       <p class="footer__copy">
         Copyright The Bees Knees © 2023 All Rights Reserved
       </p>
     </footer>
+
+
   </body>
 </html>

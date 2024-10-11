@@ -16,6 +16,59 @@
     padding-bottom: $padding-36;
 }
 
+.nav {
+  @include tablet {
+    display: flex;
+    background-color: $BandSite-Black;
+  }
+
+  &__logo {
+    background-color: $BandSite-Black;
+    color: $White;
+    display: flex;
+    justify-content: center;
+    padding: $padding-16;
+    height: 2rem;
+    margin: 0;
+
+    @include tablet {
+      padding-bottom: $padding-16;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    justify-content: space-around;
+    background-color: $BandSite-Black;
+  }
+
+  &__menu--hover {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex: 1;
+    text-align: center;
+    padding: $padding-16;
+
+    &:hover {
+      border-bottom: 0.25rem solid $White;
+    }
+  }
+
+  &__button {
+    text-decoration: none;
+    vertical-align: middle;
+    color: $White;
+
+    &:hover {
+      font-weight: 700;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
 
 body {
     font-family:"Avenir", sans-serif; 
@@ -31,11 +84,7 @@ h1{
     font-weight: 600;
 
     @include tablet {
-        font-size: $font-60;
-    }
-
-    @include desktop {
-        font-size: $font-60;
+        font-size: $font-TabletH1;
     }
 }
 
@@ -43,8 +92,8 @@ h2{
     font-size: $font-24;
     font-weight: 600;
     margin:0;
-    padding-top: $padding-24;
-    padding-left: $padding-16;
+    // padding-top: $padding-24;
+    // //padding-left: $padding-16;
  
 
     @include tablet {
@@ -102,10 +151,13 @@ p {
     color: $White;
     display: flex;
     flex-direction: column;
+
+    @include tablet;
+    padding-top: $padding-16;
   
     &__logo{
       align-items: center;
-      padding: $padding-16;
+      vertical-align: middle;
       @include tablet{
         flex-basis:100%;
       }
@@ -128,18 +180,20 @@ p {
       align-items: center;
       @include tablet{
         flex-basis:auto;
-        justify-content: center;
+        justify-content: space-between;
+    
       }
     }
 
     &__icon{
-        display: flex;
-        padding: $padding-16;
+        justify-content: space-between;
+        margin-top: 1rem;
+        margin-right:2rem;
         height:3rem;
     }
     
     &__copy{
-      @include padding-16;
+
     
       @include desktop{
         padding-top: $padding-36;
@@ -148,17 +202,40 @@ p {
       }
     }
     
-    &__hidden-1{  
+    &__logo--hidden1{  
       display: none;
   
       @include tablet{
         display: flex;
-        justify-content: right;
+        // vertical-align: middle;
+        // justify-content: right;
+        margin-right:0;
       }
     }
-    &__hidden-2{
+    &__logo--hidden2{
       @include tablet{
         display:none;
       }
     }
   }
+
+  .contact {
+    &__label {
+      font-size: 1.5rem;
+    }
+    
+    &__copy {
+      padding-top: $padding-16;
+      padding-bottom: $padding-16;
+    }
+  
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+    }
+  
+    @include desktop {
+      margin: 0 10%;
+    }
+  }
+  

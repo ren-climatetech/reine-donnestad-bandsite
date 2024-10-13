@@ -117,26 +117,41 @@
         />
       </section>
     
-    <section class="comment">
       <h2 class="comment__header">Join the Conversation</h2>
 
+    <section class="comment">
+      <img
+      class="comment__image"
+      src="assets/images/Mohan-muruge.jpg"
+      alt="Mohan-muruge"/> 
       <form class="commentforum" id="commentForm" autocomplete="on">
+       
         <label for="inputName" class="commentforum__label">NAME</label>
-        <input class="commentforum__input" placeholder="Enter your name" type="text" id="inputName" name="userName" required />
-        <div></div><label for="inputComment" class="commentforum__label">COMMENT</label><br />
-        <textarea class="commentforum__input" placeholder="Add a new comment" id="inputComment" name="Comment" required ></textarea>
-      </div>
+        <div>
+        <input class="commentforum__input" placeholder="Enter your name" type="text" id="inputName" name="userName" required/>
+        </div>
+        <div><label for="inputComment" class="commentforum__label">COMMENT</label></div>
+
+        <textarea name="userComment" class="commentforum__input" placeholder="Add a new comment" id="inputComment"  required ></textarea>
         <button class="commentforum__button" type="submit">COMMENT</button>
         <div id="outputEntry"></div>
       </form>
 
-      <article class="comment__card"> 
-        <p class="comment__card--name"></p>
-        <span class="comment__card--date"> </span>
-        <div class="comment__card--comment"></div>
-      </p>
-      </article>
     </section>
+
+    <div class="comment-container"></div>
+
+    <!-- empty containers for JavaScript rendering -->
+    <article> 
+        <div class="comment__image--container"></div>
+      <div class="comment__position">
+        <div class="comment__nameWithDate">
+          <p class="comment__card--name"></p>
+          <span class="comment__card--date"> </span>    
+        </div>
+        <p class="comment__card--comment"></p>
+        </div>
+    </article>
 
   </main>
     <footer class="footer">

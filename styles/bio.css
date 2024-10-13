@@ -232,6 +232,12 @@ p {
   }
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .pageheader {
   background-image: url("/assets/images/hero-bio.jpg");
   background-size: cover;
@@ -277,7 +283,7 @@ p {
 
 .image__container {
   position: relative;
-  max-width: 100vw;
+  max-width: 90%;
 }
 @media screen and (min-width: 768px) {
   .image__container {
@@ -309,6 +315,7 @@ p {
 .body__container {
   display: flex;
   flex-direction: column;
+  margin: 0;
 }
 @media screen and (min-width: 768px) {
   .body__container {
@@ -384,15 +391,33 @@ p {
   }
 }
 
+.comment {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  border-bottom: 0.125rem solid #AFAFAF;
+}
+.comment__image {
+  border-radius: 100%;
+  width: 5rem;
+  height: 5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding: 1rem;
+}
+
 .commentforum {
   margin: 0;
   padding: 1rem;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 }
 .commentforum__label {
   color: #AFAFAF;
   font-size: 1.125rem;
   font-weight: 600;
+  margin: 0.5rem;
 }
 .commentforum__input {
   color: #323232;
@@ -400,16 +425,56 @@ p {
   font-size: 1rem;
   font-weight: 400;
   background-color: #FAFAFA;
-  border: 0.125rem solid #AFAFAF;
+  border: 0.175rem solid #AFAFAF;
   border-radius: 0.5rem;
+  margin: 0.5rem;
+  width: 100%;
 }
 .commentforum__button {
   color: #FAFAFA;
-  padding: 0.75rem;
-  font-size: 1rem;
+  padding: 0.5rem;
+  font-size: 1.125rem;
   font-weight: 400;
   background-color: #323232;
   border: 0.125rem solid #AFAFAF;
   border-radius: 0.5rem;
+  margin: 0.5rem;
   width: 100%;
+  height: 4rem;
+  align-items: center;
+}
+
+.comment__card {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  border-bottom: 0.12rem solid #AFAFAF;
+  align-items: flex-start;
+}
+
+.comment__image--container {
+  flex-shrink: 0;
+}
+
+.comment__position {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  width: 80%;
+}
+
+.comment__image--empty {
+  border-radius: 100%;
+  width: 5rem;
+  height: 5rem;
+  -o-object-fit: none;
+     object-fit: none;
+  padding: 1rem;
+}
+
+.comment__nameWithDate {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  justify-content: space-between;
 }/*# sourceMappingURL=bio.css.map */

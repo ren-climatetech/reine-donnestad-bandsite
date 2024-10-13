@@ -3,6 +3,11 @@
 @use "./partials/variables" as *;
 @use "./partials/typography" as *;
 
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} 
 
 .pageheader{
   background-image: url('/assets/images/hero-bio.jpg');
@@ -44,7 +49,7 @@
 
 .image__container{
   position: relative;
-  max-width: 100vw;
+  max-width: 90%;
   
   @include tablet {
     margin: 0 10%;
@@ -74,6 +79,7 @@
 .body__container{
   display: flex;
   flex-direction: column; 
+  margin: 0;
 
   @include tablet{
     flex-direction: row;
@@ -141,15 +147,34 @@
   }
 }
 
+.comment{
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  border-bottom: .125rem solid $Silver;
+
+  &__image {
+  border-radius: 100%;
+  width:5rem;
+  height: 5rem;
+  object-fit: cover;
+  padding:$padding-16;
+
+}
+}
+
 .commentforum{
   margin:0;
   padding:$padding-16;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 
   &__label{
     color:$Silver;
     font-size: $font-18;
     font-weight: 600;
+    margin: .5rem;
   }
 
   &__input{
@@ -158,25 +183,61 @@
     font-size: $font-16;
     font-weight: 400;
     background-color: $Alabaster;
-    border: .125rem solid $Silver;
+    border: .175rem solid $Silver;
     border-radius: .5rem;
+    margin: .5rem;
+    width: 100%;
   }
 
   &__button{
     color: $Alabaster;
-    padding: $padding-12;
-    font-size: $font-16;
+    padding: .5rem;
+    font-size: $font-18;
     font-weight: 400;
     background-color: $BandSite-Black;
     border: .125rem solid $Silver;
     border-radius: .5rem;
-    width: 100%; 
-
+    margin: .5rem;
+    width: 100%;
+    height:4rem;
+    align-items: center;
   }
+  }
+
+
+.comment__card{
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  border-bottom: 0.12rem solid #AFAFAF;
+ 
+  align-items: flex-start;
+}
+.comment__image--container {
+  flex-shrink: 0; 
 }
 
+.comment__position {
+  display: flex;
+  flex-direction: column;
+  padding:$padding-16;
+  width:80%;
+}
 
+.comment__image--empty {
+  border-radius: 100%;
+  width:5rem;
+  height: 5rem;
+  object-fit:none;
+  padding:$padding-16;
+}
 
+.comment__nameWithDate {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem; 
+  justify-content: space-between;
+}
 
 // .contact{
 //   &__label{

@@ -88,15 +88,22 @@ h2 {
   font-size: 1.5rem;
   font-weight: 600;
   margin: 0;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 @media screen and (min-width: 768px) {
   h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  h2 {
+    font-size: 3.75rem;
   }
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.125rem;
   font-weight: 600;
 }
 @media screen and (min-width: 768px) {
@@ -131,19 +138,12 @@ p {
   font-size: 1.125rem;
   line-height: 2rem;
   font-weight: 600;
-  padding-top: 1.5rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
   padding-bottom: 1rem;
 }
 @media screen and (min-width: 768px) {
   .quote {
     font-size: 1.5rem;
     margin: 0 10%;
-    padding-top: 3rem;
-    padding-left: 2.25rem;
-    padding-right: 2.25rem;
-    padding-bottom: 2.25rem;
   }
 }
 
@@ -152,6 +152,8 @@ p {
   color: #FFFFFF;
   display: flex;
   flex-direction: column;
+  padding-left: 1rem;
+  padding-right: 1rem;
   padding-top: 1rem;
 }
 .footer__logo {
@@ -283,12 +285,10 @@ body {
 
 .image__container {
   position: relative;
-  max-width: 90%;
-}
-@media screen and (min-width: 768px) {
-  .image__container {
-    margin: 0 10%;
-  }
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
 }
 
 .image__band {
@@ -297,14 +297,12 @@ body {
   width: 100%;
   height: auto;
   min-width: 80vw;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-bottom: 1rem;
 }
 
 .body__header {
   display: flex;
-  padding-left: 1rem;
-  padding-bottom: 0;
+  font-weight: 400;
 }
 @media screen and (min-width: 768px) {
   .body__header {
@@ -325,10 +323,8 @@ body {
 }
 
 .body__copy {
+  font-size: 1rem;
   flex: 1;
-  padding-top: 1.5rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
   padding-bottom: 1rem;
 }
 @media screen and (min-width: 768px) {
@@ -346,6 +342,8 @@ body {
 .section__about {
   background-color: #FFFFFF;
   color: #323232;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .gallery {
@@ -358,6 +356,7 @@ body {
 
 .section__header {
   color: #323232;
+  padding-left: 0;
 }
 @media screen and (min-width: 1280px) {
   .section__header {
@@ -395,23 +394,31 @@ body {
   display: flex;
   flex-direction: row;
   box-sizing: border-box;
-  border-bottom: 0.125rem solid #AFAFAF;
+}
+@media screen and (min-width: 768px) {
+  .comment {
+    display: flex;
+    justify-content: center;
+    margin: 0 10%;
+  }
 }
 .comment__image {
   border-radius: 100%;
-  width: 5rem;
-  height: 5rem;
+  width: 3.5rem;
+  height: 3.5rem;
   -o-object-fit: cover;
      object-fit: cover;
-  padding: 1rem;
+  position: relative;
+  top: 2.5rem;
 }
 
 .commentforum {
   margin: 0;
-  padding: 1rem;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 .commentforum__label {
   color: #AFAFAF;
@@ -425,10 +432,11 @@ body {
   font-size: 1rem;
   font-weight: 400;
   background-color: #FAFAFA;
-  border: 0.175rem solid #AFAFAF;
+  border: 0.0625rem solid #AFAFAF;
   border-radius: 0.5rem;
   margin: 0.5rem;
   width: 100%;
+  width: 60vw;
 }
 .commentforum__button {
   color: #FAFAFA;
@@ -436,10 +444,8 @@ body {
   font-size: 1.125rem;
   font-weight: 400;
   background-color: #323232;
-  border: 0.125rem solid #AFAFAF;
   border-radius: 0.5rem;
-  margin: 0.5rem;
-  width: 100%;
+  margin: 1rem;
   height: 4rem;
   align-items: center;
 }
@@ -448,8 +454,17 @@ body {
   display: flex;
   flex-direction: row;
   box-sizing: border-box;
-  border-bottom: 0.12rem solid #AFAFAF;
+  border-bottom: 0.0625rem solid #AFAFAF;
   align-items: flex-start;
+}
+
+.comment__section {
+  border-top: 0.0625rem solid #AFAFAF;
+}
+@media screen and (min-width: 768px) {
+  .comment__section {
+    margin: 0 10%;
+  }
 }
 
 .comment__image--container {
@@ -460,16 +475,18 @@ body {
   display: flex;
   flex-direction: column;
   padding: 1rem;
-  width: 80%;
+  width: 100%;
 }
 
 .comment__image--empty {
   border-radius: 100%;
-  width: 5rem;
-  height: 5rem;
+  background-color: #AFAFAF;
+  width: 3.5rem;
+  height: 3.5rem;
   -o-object-fit: none;
      object-fit: none;
-  padding: 1rem;
+  position: relative;
+  top: 1.5rem;
 }
 
 .comment__nameWithDate {
@@ -477,4 +494,13 @@ body {
   flex-direction: row;
   gap: 0.5rem;
   justify-content: space-between;
+}
+
+.comment__card--name {
+  font-weight: 600;
+}
+
+.comment__card--date {
+  color: #AFAFAF;
+  font-weight: 600;
 }/*# sourceMappingURL=bio.css.map */

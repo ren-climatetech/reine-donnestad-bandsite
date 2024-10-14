@@ -13,7 +13,7 @@ const showData = [
 
 for (let i=0; i < showData.length; i++) {
     const showContainer = document.createElement('div');
-    showContainer.classList.add('show-container');
+    showContainer.classList.add('allShows__container');
 
     const dateContainer = document.createElement('div');
     dateContainer.classList.add('date-container');

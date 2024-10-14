@@ -88,15 +88,22 @@ h2 {
   font-size: 1.5rem;
   font-weight: 600;
   margin: 0;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 @media screen and (min-width: 768px) {
   h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  h2 {
+    font-size: 3.75rem;
   }
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.125rem;
   font-weight: 600;
 }
 @media screen and (min-width: 768px) {
@@ -131,19 +138,12 @@ p {
   font-size: 1.125rem;
   line-height: 2rem;
   font-weight: 600;
-  padding-top: 1.5rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
   padding-bottom: 1rem;
 }
 @media screen and (min-width: 768px) {
   .quote {
     font-size: 1.5rem;
     margin: 0 10%;
-    padding-top: 3rem;
-    padding-left: 2.25rem;
-    padding-right: 2.25rem;
-    padding-bottom: 2.25rem;
   }
 }
 
@@ -152,6 +152,8 @@ p {
   color: #FFFFFF;
   display: flex;
   flex-direction: column;
+  padding-left: 1rem;
+  padding-right: 1rem;
   padding-top: 1rem;
 }
 .footer__logo {
@@ -239,7 +241,7 @@ p {
   flex-direction: column;
   position: relative;
   width: 100%;
-  height: 60vw;
+  height: auto;
 }
 .pageheader__overlay {
   display: flex;
@@ -254,17 +256,13 @@ p {
   z-index: 1;
   align-items: center;
   color: #FFFFFF;
-  padding-top: 1.5rem;
   padding-left: 1rem;
   padding-right: 1rem;
-  padding-bottom: 1rem;
 }
 @media screen and (min-width: 768px) {
   .pageheader__title {
-    padding-top: 3rem;
     padding-left: 2.25rem;
     padding-right: 2.25rem;
-    padding-bottom: 2.25rem;
     margin: 0 10%;
   }
 }
@@ -273,60 +271,89 @@ p {
   flex-direction: column;
   z-index: 1;
   color: #FFFFFF;
-  padding-top: 1.5rem;
   padding-left: 1rem;
   padding-right: 1rem;
-  padding-bottom: 1rem;
 }
 @media screen and (min-width: 768px) {
   .pageheader__content {
-    padding-top: 3rem;
     padding-left: 2.25rem;
     padding-right: 2.25rem;
-    padding-bottom: 2.25rem;
     margin: 0 10%;
   }
 }
 .pageheader__song {
   display: flex;
   flex-direction: column;
+  position: relative;
   z-index: 1;
-  max-width: 30vw;
-  max-height: 5vh;
+  width: 100%;
+  max-width: 100vw;
+  box-sizing: border-box;
+  max-height: none;
+  padding-left: 2.25rem;
+  padding-right: 2.25rem;
+  padding-bottom: 1.5rem;
+}
+@media screen and (min-width: 768px) {
+  .pageheader__song {
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+  }
+}
+.pageheader__song iframe {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+.allShows__container {
+  border-bottom: 0.12rem solid #AFAFAF;
+  padding-left: 1rem;
+  padding-right: 1rem;
   padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.shows__header {
+  color: grey;
+  font-weight: 600;
+  font-size: 1rem;
   padding-left: 1rem;
   padding-right: 1rem;
   padding-bottom: 1rem;
 }
 @media screen and (min-width: 768px) {
-  .pageheader__song {
-    padding-top: 3rem;
-    padding-left: 2.25rem;
-    padding-right: 2.25rem;
-    padding-bottom: 2.25rem;
-    margin: 0 10%;
+  .shows__header {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 }
 
-.shows__container {
-  border-bottom-width: 1rem;
-  border-color: gray;
+.date, .location, .venue {
+  font-size: 1.5rem;
+  color: #323232;
+  font-weight: 600;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .date, .location, .venue {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
 }
 
-.shows__header {
-  font-size: 1rem;
-  color: grey;
-  font-weight: 600;
+button {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin: 1rem;
+  color: #FAFAFA;
   font-size: 1.125rem;
-}
-
-.shows__date {
-  font-size: 1.5rem;
-  color: #323232;
-  font-weight: 600;
-}
-
-.shows__location {
-  font-size: 1.5rem;
-  color: #323232;
+  font-weight: 400;
+  background-color: #323232;
+  border-radius: 0.5rem;
+  width: 100%;
+  height: 3.5rem;
+  align-items: center;
 }/*# sourceMappingURL=shows.css.map */

@@ -16,6 +16,17 @@
     padding-bottom: $padding-36;
 }
 
+@mixin padding-mobile{
+  padding-left: $padding-16;
+  padding-right: $padding-16;
+}
+
+@mixin padding-tablet{
+  padding-left: $padding-36;
+  padding-right: $padding-36;
+}
+
+
 .nav {
   @include tablet {
     display: flex;
@@ -92,17 +103,21 @@ h2{
     font-size: $font-24;
     font-weight: 600;
     margin:0;
-    // padding-top: $padding-24;
-    // //padding-left: $padding-16;
+    padding-top: $padding-24;
+    padding-bottom: $padding-24;
  
 
     @include tablet {
-        font-size: $font-32;
+        font-size: $font-40;
     }
+
+    @include desktop {
+      font-size: $font-60;
+  }
 }
 
 h3{
-    font-size: $font-24;
+    font-size: $font-18;
     font-weight: 600;
 
     @include tablet {
@@ -137,12 +152,13 @@ p {
     font-size: $font-18;
     line-height: $line-height-32;
     font-weight: 600;
-    @include padding-16;
+    padding-bottom: $padding-16;
+    // @include padding-16;
 
     @include tablet {
         font-size: $font-24;
         margin: 0 10%;
-        @include padding-36;
+        // @include padding-36;
     }
 }
 
@@ -151,6 +167,7 @@ p {
     color: $White;
     display: flex;
     flex-direction: column;
+    @include padding-mobile;
 
     @include tablet;
     padding-top: $padding-16;

@@ -19,7 +19,7 @@ function createCommentCard(entry) {
 
     const cardImage = document.createElement("img");
     cardImage.classList.add("comment__image--empty");
-    cardImage.src = entry.image || "assets/images/Mohan-muruge.jpg"; 
+    cardImage.src = entry.image || " "; 
 
 
     imageContainer.appendChild(cardImage);

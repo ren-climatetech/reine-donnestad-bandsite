@@ -49,11 +49,10 @@ body {
 
 .image__container{
   position: relative;
-  max-width: 90%;
-  
-  @include tablet {
-    margin: 0 10%;
-}
+  display: flex;
+  width:100%;
+  justify-content: center;
+  align-items: center;    
 }
 
 .image__band{
@@ -61,15 +60,14 @@ body {
   width:100%;
   height: auto;
   min-width:80vw;
-  padding-left: $padding-16;
-  padding-right: $padding-16;
+  padding-bottom: $padding-16;
+ 
 }
 
 
 .body__header{
   display:flex;
-  padding-left: $padding-16;
-  padding-bottom: 0;
+  font-weight: 400;
 
   @include tablet {
     margin: 0 10%;
@@ -81,6 +79,7 @@ body {
   flex-direction: column; 
   margin: 0;
 
+
   @include tablet{
     flex-direction: row;
     margin: 0 10%;
@@ -88,8 +87,9 @@ body {
 }
 
 .body__copy{
+  font-size: $font-16;
   flex: 1;
-  @include padding-16;
+  padding-bottom: $padding-16;
 
   @include tablet{
     display: flex;
@@ -106,6 +106,7 @@ body {
 .section__about{
   background-color: $White;
   color: $BandSite-Black;
+  @include padding-mobile
  
 }
 
@@ -116,6 +117,7 @@ body {
 
 .section__header{
   color: $BandSite-Black;
+  padding-left: 0;
 
   @include desktop {
     margin: 0 10%;
@@ -151,24 +153,29 @@ body {
   display: flex;
   flex-direction: row;
   box-sizing: border-box;
-  border-bottom: .125rem solid $Silver;
+
+  @include tablet{
+  display: flex;
+  justify-content: center;
+    margin: 0 10%;
+  }
 
   &__image {
   border-radius: 100%;
-  width:5rem;
-  height: 5rem;
+  width:3.5rem;
+  height: 3.5rem;
   object-fit: cover;
-  padding:$padding-16;
-
+  position: relative; 
+  top: 2.5rem; 
 }
 }
 
 .commentforum{
   margin:0;
-  padding:$padding-16;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  @include padding-mobile;
 
   &__label{
     color:$Silver;
@@ -183,10 +190,13 @@ body {
     font-size: $font-16;
     font-weight: 400;
     background-color: $Alabaster;
-    border: .175rem solid $Silver;
+    border: .0625rem solid $Silver;
     border-radius: .5rem;
     margin: .5rem;
-    width: 100%;
+    width:100%;
+
+    @include tablet;
+    width:60vw;
   }
 
   &__button{
@@ -195,10 +205,8 @@ body {
     font-size: $font-18;
     font-weight: 400;
     background-color: $BandSite-Black;
-    border: .125rem solid $Silver;
     border-radius: .5rem;
-    margin: .5rem;
-    width: 100%;
+    margin: 1rem;
     height:4rem;
     align-items: center;
   }
@@ -209,9 +217,18 @@ body {
   display: flex;
   flex-direction: row;
   box-sizing: border-box;
-  border-bottom: 0.12rem solid #AFAFAF;
+  border-bottom: 0.0625rem solid #AFAFAF;
  
   align-items: flex-start;
+}
+
+.comment__section{
+  border-top: 0.0625rem solid #AFAFAF;
+  
+  @include tablet{
+    margin: 0 10%;
+
+  }
 }
 .comment__image--container {
   flex-shrink: 0; 
@@ -221,15 +238,18 @@ body {
   display: flex;
   flex-direction: column;
   padding:$padding-16;
-  width:80%;
+  width:100%;
+
 }
 
 .comment__image--empty {
   border-radius: 100%;
-  width:5rem;
-  height: 5rem;
+  background-color: $Silver;
+  width:3.5rem;
+  height: 3.5rem;
   object-fit:none;
-  padding:$padding-16;
+  position: relative; 
+  top: 1.5rem; 
 }
 
 .comment__nameWithDate {
@@ -239,24 +259,11 @@ body {
   justify-content: space-between;
 }
 
-// .contact{
-//   &__label{
-//     font-size: 1.5rem;
-//   }
-  
-//   &__copy{
-//     padding-top: $padding-16;
-//     padding-bottom: $padding-16;
-//   }
+.comment__card--name{
+  font-weight:600;
+}
 
-//   @include tablet {
-//   display: flex;
-//   justify-content: space-between;
-//   }
-
-//   @include desktop{
-//     margin: 0 10%;
-//     }
-// }
-
-
+.comment__card--date{
+  color: $Silver;
+  font-weight:600;
+}

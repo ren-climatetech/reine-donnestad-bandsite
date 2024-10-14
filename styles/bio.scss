@@ -212,14 +212,26 @@ body {
   }
   }
 
+.comment-container{
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  align-items: flex-start;
+
+  @include tablet {
+    margin: 0 10%; 
+}
+}
 
 .comment__card{
   display: flex;
   flex-direction: row;
   box-sizing: border-box;
   border-bottom: 0.0625rem solid #AFAFAF;
- 
   align-items: flex-start;
+   @include tablet {
+    margin: 0 10%; 
+}
 }
 
 .comment__section{
@@ -232,13 +244,20 @@ body {
 }
 .comment__image--container {
   flex-shrink: 0; 
+  
 }
 
 .comment__position {
   display: flex;
   flex-direction: column;
-  padding:$padding-16;
   width:100%;
+  padding:$padding-16;
+  // width:100%;
+
+  @include tablet{
+    margin: 0 10%;
+
+  }
 
 }
 
@@ -261,6 +280,7 @@ body {
 
 .comment__card--name{
   font-weight:600;
+
 }
 
 .comment__card--date{

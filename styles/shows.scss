@@ -10,13 +10,17 @@
   background-size: cover;
   display:flex;
   flex-direction: column;
+  justify-content: center;
+  vertical-align: middle;
+  flex-grow: .5;
   position: relative;
-  width:100%;
-  height: auto;
+  width: auto;
+  height: 60vh;
 
   &__overlay {
     display: flex;
     position: absolute;
+    // z-index: -1;
     width:100%;
     height:100%;
     background-color: $BandSite-Black;
@@ -25,27 +29,28 @@
 
   &__title{
     display: flex;
-    z-index: 1;
+    z-index: .5;
     align-items: center;
     color: $White;
     @include padding-mobile;
   
     @include tablet {
-      @include padding-tablet;
-      margin: 0 10%;
+      // @include padding-tablet;
+      // margin: 0 10%;
     }
   }
 
   &__content{
     display: flex;
     flex-direction: column;
+    flex-grow: .5;
     z-index: 1;
     color: $White;
     @include padding-mobile;
   
     @include tablet {
-      @include padding-tablet;
-      margin: 0 10%;
+      // @include padding-tablet;
+      // margin: 0 10%;
     }
   }
 
@@ -53,16 +58,25 @@
     display: flex;
     flex-direction: column;
     position: relative;
+    justify-content: center;
+    vertical-align: middle;
     z-index: 1;
-    width: 100%;
-    max-width: 100vw;
+    width: 80%;
+    max-width: 30vw;
     box-sizing: border-box; 
     max-height: none;
-    @include padding-tablet;
     padding-bottom: $padding-24;
+    @include padding-mobile;
 
     @include tablet {
+    @include padding-tablet;
+    padding-bottom: $padding-24;
+    }
+
+    @include desktop {
       @include padding-tablet;
+      margin: 0 10%;
+    }
     }
 
     iframe {
@@ -71,13 +85,57 @@
       max-width: 100%;
     }
   }
+
+.pageheader__position{
+  @include tablet{
+    display: flex;
+    flex-direction: row;
+    z-index: 1;
+    margin: auto;
+    flex-grow: .5;
+  }
 }
+
+main {
+  @include tablet{
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: row;
+    margin: auto;
+    width: 100%;
+    justify-content: space-around;
+  }
+}
+
+.header{
+  padding-left: $padding-16;
+  @include tablet {
+    padding-left: $padding-24;
+  }
+  @include desktop {
+    padding-left: $padding-48;
+  }
+}
+
+.shows{
+  @include tablet{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 
 .allShows__container{
   border-bottom: .12rem solid $Silver;
+  margin-bottom: 1rem;
+  width: 100%;
   @include padding-mobile;
   padding-top: $padding-24;
   padding-bottom: $padding-24;
+  @include tablet{
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 .shows__header{
@@ -92,10 +150,12 @@
    padding-right: $padding-24;
   }
 }
-.date, .location, .venue{
+
+.date {
   font-size: $font-24;
   color: $BandSite-Black;
   font-weight: 600;
+  width:15rem;
   @include padding-mobile;
   padding-bottom: $padding-16;
 
@@ -105,6 +165,23 @@
    }
 }
 
+.location, .venue{
+  font-size: $font-24;
+  color: $BandSite-Black;
+  font-weight: 400;
+  width:15rem;
+  @include padding-mobile;
+  padding-bottom: $padding-16;
+
+  @include tablet {
+    padding-left: $padding-24;
+    padding-right: $padding-24;
+   }
+}
+
+
+
+
 button{
   @include padding-mobile;
   margin: $margin-16;
@@ -113,7 +190,7 @@ button{
   font-weight: 400;
   background-color: $BandSite-Black;
   border-radius: .5rem;
-  width: 100%;
+  width: 12rem;
   height:3.5rem;
   align-items: center;
 }

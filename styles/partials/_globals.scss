@@ -151,24 +151,26 @@ p {
     line-height: $line-height-32;
     font-weight: 600;
     padding-bottom: $padding-16;
-    // @include padding-16;
 
     @include tablet {
         font-size: $font-24;
         margin: 0 10%;
-        // @include padding-36;
     }
 }
 
-.footer{
+
+.footer {
     background-color: $BandSite-Black;
     color: $White;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     @include padding-mobile;
-
-    @include tablet;
+    
+    @include tablet {
     padding-top: $padding-16;
+    }
+
   
     &__logo{
       align-items: center;
@@ -177,22 +179,32 @@ p {
         flex-basis:100%;
       }
     }
-  
-    &__container{
-      @include tablet{
+
+    &__contact{
       display: flex;
       justify-content: space-between;
       flex:1;
+    }
   
+    &__container{
+      @include tablet{
+      box-sizing: border-box;
+      display: flex;
+      justify-content: space-between;
+      flex: 0 0 auto;
+      min-width: 70rem;
       }
+    }
+  
       @include desktop{
         margin: 0 10%;
         }
-    }
+      
   
-    &__container--links{
+    &__social--links{
       display: flex;
       align-items: center;
+  
       @include tablet{
         flex-basis:auto;
         justify-content: space-between;
@@ -207,7 +219,7 @@ p {
         height:3rem;
     }
     
-    &__copy{
+    &__copy {
       padding-bottom: $padding-16;
 
     
@@ -217,7 +229,24 @@ p {
         margin: 0 10%;
       }
     }
+    &__contact--label {
+      font-size: 1.5rem;
+    }
     
+    &__contact--copy {
+      padding-top: $padding-16;
+      padding-bottom: $padding-16;
+    }
+  
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+    }
+  
+    @include desktop {
+      margin: 0 10%;
+    }
+
     &__logo--hidden1{  
       display: none;
   
@@ -234,25 +263,29 @@ p {
         display:none;
       }
     }
-  }
+}
 
-  .contact {
-    &__label {
-      font-size: 1.5rem;
-    }
-    
-    &__copy {
-      padding-top: $padding-16;
-      padding-bottom: $padding-16;
-    }
+
+// .footer{
+//   background-color: $BandSite-Black;
+//   color: $White;
+//   box-sizing: border-box;
+
+//   @include tablet{
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: space-around;
+//     gap: 5rem;
+//   }
+
+//   &__social--links2 {
+
+//     @include tablet {
+//     display: none;
+//     }
+//  }
+//   &__social--links2 {
+//     display: none;
+//   }
   
-    @include tablet {
-      display: flex;
-      justify-content: space-between;
-    }
-  
-    @include desktop {
-      margin: 0 10%;
-    }
-  }
-  
+// }

@@ -169,6 +169,10 @@ p {
     
     @include tablet {
     padding-top: $padding-16;
+    
+     @include desktop{
+        padding: 0 10%;
+        }
     }
 
   
@@ -181,9 +185,12 @@ p {
     }
 
     &__contact{
-      display: flex;
-      justify-content: space-between;
-      flex:1;
+      @include tablet{
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        flex: 1;
+        }
     }
   
     &__container{
@@ -191,14 +198,9 @@ p {
       box-sizing: border-box;
       display: flex;
       justify-content: space-between;
-      flex: 0 0 auto;
-      min-width: 70rem;
+      flex: 1;
       }
     }
-  
-      @include desktop{
-        margin: 0 10%;
-        }
       
   
     &__social--links{
@@ -226,7 +228,6 @@ p {
       @include desktop{
         padding-top: $padding-36;
         padding-bottom: $padding-48;
-        margin: 0 10%;
       }
     }
     &__contact--label {
@@ -243,17 +244,14 @@ p {
       justify-content: space-between;
     }
   
-    @include desktop {
-      margin: 0 10%;
-    }
 
     &__logo--hidden1{  
       display: none;
   
       @include tablet{
         display: flex;
-        // vertical-align: middle;
-        // justify-content: right;
+        vertical-align: middle;
+        justify-content: right;
         margin-right:0;
       }
     }

@@ -171,11 +171,6 @@ p {
   vertical-align: middle;
 }
 @media screen and (min-width: 768px) {
-  .footer__logo {
-    flex-basis: 100%;
-  }
-}
-@media screen and (min-width: 768px) {
   .footer__contact {
     box-sizing: border-box;
     display: flex;
@@ -197,7 +192,6 @@ p {
 }
 @media screen and (min-width: 768px) {
   .footer__social--links {
-    flex-basis: auto;
     justify-content: space-between;
   }
 }
@@ -235,9 +229,9 @@ p {
 @media screen and (min-width: 768px) {
   .footer__logo--hidden1 {
     display: flex;
-    vertical-align: middle;
-    justify-content: right;
-    margin-right: 0;
+    position: relative;
+    top: 3rem;
+    left: 3rem;
   }
 }
 .footer__logo--hidden2 {

@@ -179,8 +179,9 @@ p {
     &__logo{
       align-items: center;
       vertical-align: middle;
+
       @include tablet{
-        flex-basis:100%;
+        // flex-basis:100%;
       }
     }
 
@@ -208,7 +209,7 @@ p {
       align-items: center;
   
       @include tablet{
-        flex-basis:auto;
+        // flex-basis:auto;
         justify-content: space-between;
     
       }
@@ -250,9 +251,8 @@ p {
   
       @include tablet{
         display: flex;
-        vertical-align: middle;
-        justify-content: right;
-        margin-right:0;
+        position: relative;
+        top: 3rem; left: 3rem;
       }
     }
     &__logo--hidden2{

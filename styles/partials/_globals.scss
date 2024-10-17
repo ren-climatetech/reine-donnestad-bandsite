@@ -33,6 +33,10 @@
     background-color: $BandSite-Black;
   }
 
+  @include desktop{
+    padding: 0 10%;
+  }
+
   &__logo {
     background-color: $BandSite-Black;
     color: $White;
@@ -40,10 +44,9 @@
     justify-content: center;
     padding: $padding-16;
     height: 2rem;
-    margin: 0;
 
     @include tablet {
-      padding-bottom: $padding-16;
+      padding: $padding-36;
     }
   }
 
@@ -63,6 +66,10 @@
 
     &:hover {
       border-bottom: 0.25rem solid $White;
+    }
+
+    @include tablet {
+      padding: $padding-24;
     }
   }
 
@@ -144,18 +151,6 @@ p {
         font-size: $font-16;
     }
 
-}
-
-.quote {
-    font-size: $font-18;
-    line-height: $line-height-32;
-    font-weight: 600;
-    padding-bottom: $padding-16;
-
-    @include tablet {
-        font-size: $font-24;
-        margin: 0 10%;
-    }
 }
 
 
@@ -248,9 +243,12 @@ p {
 
     &__logo--hidden1{  
       display: none;
-  
+
       @include tablet{
         display: flex;
+      }
+  
+      @include desktop{
         position: relative;
         top: 3rem; left: 3rem;
       }

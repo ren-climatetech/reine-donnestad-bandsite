@@ -27,6 +27,8 @@ body {
   
     @include tablet {
       @include padding-36;
+    }
+    @include desktop{
       margin: 0 10%;
     }
   }
@@ -41,27 +43,41 @@ body {
   opacity: 50%;
 }
 
-.section__header{
-  padding: $padding-16;
-  margin:0;
-  padding-top: $padding-32;
-}
+
 
 .image__container{
   position: relative;
   display: flex;
-  width:100%;
+  max-width:70vw;
+  height: auto;
   justify-content: center;
-  align-items: center;    
+  align-items: center; 
+  
+  @include tablet{
+    margin: 0 10%;
+  }
+ 
 }
 
 .image__band{
   object-fit:contain;
   width:100%;
   height: auto;
-  min-width:80vw;
+  width:100%;
   padding-bottom: $padding-16;
- 
+
+}
+
+.quote {
+  font-size: $font-18;
+  line-height: $line-height-32;
+  font-weight: 600;
+  padding-bottom: $padding-16;
+
+  @include tablet {
+      font-size: $font-24;
+      margin: 0 10%;
+  }
 }
 
 
@@ -88,11 +104,11 @@ body {
 
 .body__copy{
   font-size: $font-16;
-  flex: 1;
   padding-bottom: $padding-16;
 
   @include tablet{
     display: flex;
+    margin-right: 3rem;
     flex-flow: row wrap;
 
 }
@@ -106,34 +122,43 @@ body {
 .section__about{
   background-color: $White;
   color: $BandSite-Black;
-  @include padding-mobile
- 
-}
+  @include padding-mobile;
 
-.gallery{
-  background-color: $Alabaster;
-  @include padding-16;
-}
-
-.section__header{
-  color: $BandSite-Black;
-  padding-left: 0;
-
-  @include desktop {
-    margin: 0 10%;
-}
-}
-
-.gallery__container{
-  @include tablet{
-    display:flex;
-    flex-flow: row wrap;
-  }
+  @include tablet {
+    @include padding-36;
+ }
 
   @include desktop{
     margin: 0 10%;
   }
+ 
 }
+
+.gallery {
+  background-color: $Alabaster;
+  @include padding-16;
+
+  &__container {
+    @include tablet {
+      display:flex;
+      flex-flow: row wrap;
+      justify-content: space-around;
+    }
+    @include desktop{
+        margin: 0 10%;
+      }
+  }
+
+  &__header{
+    @include tablet {
+      @include padding-36;
+   }
+    @include desktop{
+      margin: 0 10%;
+    }
+  }
+}
+
 
 .image__gallery{
   position: relative;
@@ -144,6 +169,7 @@ body {
   @include tablet{
     flex: 1 1 20%;
     min-width:22vw;
+    padding-left:$padding-36;
     padding-right:$padding-36;
     
   }
@@ -167,6 +193,15 @@ body {
   object-fit: cover;
   position: relative; 
   top: 2.5rem; 
+}
+
+&__header {
+  @include tablet {
+    @include padding-36;
+ }
+  @include desktop{
+    margin: 0 10%;
+  }
 }
 }
 

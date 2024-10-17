@@ -183,7 +183,10 @@ body {
   @include tablet{
   display: flex;
   justify-content: center;
-    margin: 0 10%;
+  // max-width: 60rem;
+  padding: $padding-24;
+  // margin: 0 10%;
+  margin: auto;
   }
 
   &__image {
@@ -193,16 +196,17 @@ body {
   object-fit: cover;
   position: relative; 
   top: 2.5rem; 
-}
-
-&__header {
-  @include tablet {
-    @include padding-36;
- }
-  @include desktop{
-    margin: 0 10%;
   }
-}
+
+  &__header {
+    @include tablet {
+      @include padding-36;
+      max-width: 80rem;
+  }
+    @include desktop{
+      margin: 0 10%;
+    }
+  }
 }
 
 .commentforum{
@@ -247,36 +251,44 @@ body {
   }
   }
 
-.comment-container{
+// .comment-container{
+//   display: flex;
+//   flex-direction: column;
+//   box-sizing: border-box;
+//   align-items: flex-start;
+  
+
+//   @include tablet {
+//     margin: 0 10%; 
+// }
+// }
+
+.comment__card {
   display: flex;
   flex-direction: row;
   box-sizing: border-box;
-  align-items: flex-start;
-
-  @include tablet {
-    margin: 0 10%; 
-}
-}
-
-.comment__card{
-  display: flex;
-  flex-direction: row;
-  box-sizing: border-box;
-  border-bottom: 0.0625rem solid #AFAFAF;
+  border-top: 0.0625rem solid #AFAFAF;
+  // border-bottom: 0.0625rem solid #AFAFAF;
   align-items: flex-start;
    @include tablet {
     margin: 0 10%; 
 }
 }
 
-.comment__section{
-  border-top: 0.0625rem solid #AFAFAF;
-  
-  @include tablet{
-    margin: 0 10%;
+.comment-container, .comment__section {
+  // border-top: 0.0625rem solid #AFAFAF;
+  display: flex;
+  flex-direction: column;
 
+  @include tablet{
+    max-width: 100rem;
+    // margin: 0 10%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
   }
 }
+
 .comment__image--container {
   flex-shrink: 0; 
   
@@ -285,12 +297,11 @@ body {
 .comment__position {
   display: flex;
   flex-direction: column;
-  width:100%;
-  padding:$padding-16;
   // width:100%;
+  padding:$padding-16;
 
   @include tablet{
-    margin: 0 10%;
+    // margin: 0 10%;
 
   }
 

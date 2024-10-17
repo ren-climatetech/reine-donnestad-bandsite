@@ -84,7 +84,7 @@ main {
 }
 
 h1 {
-  font-size: 1.5rem;
+  font-size: 3.75rem;
   font-weight: 600;
 }
 @media screen and (min-width: 768px) {
@@ -250,10 +250,22 @@ p {
   flex-direction: column;
   justify-content: center;
   vertical-align: middle;
-  flex-grow: 0.5;
   position: relative;
   width: auto;
   height: 60vh;
+}
+.pageheader__position {
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+@media screen and (min-width: 1280px) {
+  .pageheader__position {
+    display: flex;
+    flex-direction: row;
+    z-index: 1;
+    margin: 0 10%;
+  }
 }
 .pageheader__overlay {
   display: flex;
@@ -265,20 +277,37 @@ p {
 }
 .pageheader__title {
   display: flex;
-  z-index: 0.5;
+  z-index: 1;
   align-items: center;
   color: #FFFFFF;
+  font-weight: 400;
+  font-size: 2rem;
   padding-left: 1rem;
-  padding-right: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .pageheader__title {
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .pageheader__title {
+    margin: 0 10%;
+  }
 }
 .pageheader__content {
   display: flex;
   flex-direction: column;
-  flex-grow: 0.5;
   z-index: 1;
   color: #FFFFFF;
   padding-left: 1rem;
-  padding-right: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .pageheader__content {
+    min-width: 40rem;
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+  }
 }
 .pageheader__song {
   display: flex;
@@ -287,13 +316,13 @@ p {
   justify-content: center;
   vertical-align: middle;
   z-index: 1;
-  width: 80%;
-  max-width: 30vw;
+  width: 100%;
   box-sizing: border-box;
   max-height: none;
-  padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
   padding-left: 1rem;
   padding-right: 1rem;
+  padding-bottom: 1rem;
 }
 @media screen and (min-width: 768px) {
   .pageheader__song {
@@ -304,24 +333,7 @@ p {
 }
 @media screen and (min-width: 1280px) {
   .pageheader__song {
-    padding-left: 2.25rem;
-    padding-right: 2.25rem;
     margin: 0 10%;
-  }
-}
-.pageheader iframe {
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-}
-
-@media screen and (min-width: 768px) {
-  .pageheader__position {
-    display: flex;
-    flex-direction: row;
-    z-index: 1;
-    margin: auto;
-    flex-grow: 0.5;
   }
 }
 

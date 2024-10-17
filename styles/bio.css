@@ -84,7 +84,7 @@ main {
 }
 
 h1 {
-  font-size: 1.5rem;
+  font-size: 3.75rem;
   font-weight: 600;
 }
 @media screen and (min-width: 768px) {
@@ -293,7 +293,6 @@ body {
 .image__container {
   position: relative;
   display: flex;
-  max-width: 70vw;
   height: auto;
   justify-content: center;
   align-items: center;

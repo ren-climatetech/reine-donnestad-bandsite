@@ -11,11 +11,29 @@
   display:flex;
   flex-direction: column;
   justify-content: center;
+  // gap: 5rem;
   vertical-align: middle;
-  flex-grow: .5;
+  // flex-grow: .5;
   position: relative;
   width: auto;
   height: 60vh;
+
+  &__position{
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+
+    // @include tablet {
+    //   @include padding-tablet;
+    // }
+
+    @include desktop{
+      display: flex;
+      flex-direction: row;
+      z-index: 1;
+      margin: 0 10%;
+    }
+  }
 
   &__overlay {
     display: flex;
@@ -29,44 +47,48 @@
 
   &__title{
     display: flex;
-    z-index: .5;
+    z-index: 1;
     align-items: center;
     color: $White;
-    @include padding-mobile;
+    font-weight: 400;
+    font-size: $font-32;
+    padding-left: $padding-16;
+    // @include padding-mobile;
   
     @include tablet {
-      // @include padding-tablet;
-      // margin: 0 10%;
+      @include padding-tablet;
+    }
+    @include desktop {
+      margin: 0 10%;
     }
   }
 
   &__content{
     display: flex;
     flex-direction: column;
-    flex-grow: .5;
     z-index: 1;
     color: $White;
-    @include padding-mobile;
+    padding-left: $padding-16;
+    // @include padding-mobile;
   
     @include tablet {
-      // @include padding-tablet;
+      min-width: 40rem;
+      @include padding-tablet;
       // margin: 0 10%;
     }
   }
 
-  &__song{
+  &__song {
     display: flex;
     flex-direction: column;
     position: relative;
     justify-content: center;
     vertical-align: middle;
     z-index: 1;
-    width: 80%;
-    max-width: 30vw;
+    width: 100%;
     box-sizing: border-box; 
     max-height: none;
-    padding-bottom: $padding-24;
-    @include padding-mobile;
+    @include padding-16;
 
     @include tablet {
     @include padding-tablet;
@@ -74,27 +96,15 @@
     }
 
     @include desktop {
-      @include padding-tablet;
       margin: 0 10%;
     }
-    }
-
-    iframe {
-      width: 100%;  
-      height: auto;
-      max-width: 100%;
-    }
-  }
-
-.pageheader__position{
-  @include tablet{
-    display: flex;
-    flex-direction: row;
-    z-index: 1;
-    margin: auto;
-    flex-grow: .5;
   }
 }
+
+// iframe {
+//   height: auto;
+//   max-width: 100%;
+// }
 
 main {
   @include tablet{

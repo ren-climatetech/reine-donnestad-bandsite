@@ -58,6 +58,8 @@ function createCommentCard(entry) {
 }
 // createCommentCard({});
 
+
+//turn into async await. create instance of bandsite API, then follow loop
 let renderCommentCards = () => {
     const myCommentsEl = document.querySelector(".comment__card--comment");
     myCommentsEl.innerHTML ="";

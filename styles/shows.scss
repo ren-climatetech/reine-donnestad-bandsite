@@ -92,6 +92,8 @@
 
     @include tablet {
     @include padding-tablet;
+    // width: 30rem;
+    min-width: 30rem;
     padding-bottom: $padding-24;
     }
 
@@ -101,10 +103,11 @@
   }
 }
 
-// iframe {
-//   height: auto;
-//   max-width: 100%;
-// }
+iframe {
+  // height: auto;
+  width:100%;
+  // max-width: 30rem;
+}
 
 main {
   @include tablet{
@@ -115,9 +118,22 @@ main {
     width: 100%;
     justify-content: space-around;
   }
+
+
+  
 }
 
-.header{
+.header__label{
+  display:none;
+
+  @include tablet;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+}
+
+.main__header{
   padding-left: $padding-16;
   @include tablet {
     padding-left: $padding-24;
@@ -134,13 +150,12 @@ main {
   }
 }
 
-
 .allShows__container{
   border-bottom: .12rem solid $Silver;
   margin-bottom: 1rem;
   width: 100%;
   @include padding-mobile;
-  padding-top: $padding-24;
+  // padding-top: $padding-24; could also add padding-bottom 0 to Shows header
   padding-bottom: $padding-24;
   @include tablet{
     display: flex;
@@ -154,11 +169,41 @@ main {
   font-size: $font-16;
   @include padding-mobile;
   padding-bottom: $padding-16;
+  
 
   @include tablet {
-   padding-left: $padding-24;
-   padding-right: $padding-24;
-  }
+    display: none;
+  //   display: flex;
+  // //  padding-left: $padding-24;
+  // //  padding-right: $padding-24;
+  // }
+}
+}
+
+.shows__header--tablet{
+  display: none;
+
+  @include tablet {
+    display: flex;
+    flex: 1;
+    align-items: flex-start;
+}
+}
+
+.shows__header--label{
+  
+  @include tablet {
+  color: grey;
+  font-weight: 600;
+  font-size: $font-16;
+  padding-top:  3.75rem;
+  padding-bottom: 2.8rem;
+  padding-left: 2.8rem; 
+  // @include padding-mobile;
+  // padding-bottom: $padding-16;
+  width: 15rem;
+      
+}
 }
 
 .date {
@@ -192,7 +237,7 @@ main {
 
 
 
-button{
+button {
   @include padding-mobile;
   margin: $margin-16;
   color: $Alabaster;

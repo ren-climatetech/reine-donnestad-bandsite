@@ -55,7 +55,13 @@ console.log("check:", showData);
 
         const date = document.createElement('p');
         date.classList.add('date');
-        date.textContent = showData[i].date;  //try converting date here
+
+        const showDate = new Date (showData[i].date);
+        const showDateText = showDate.toDateString();
+
+        console.log(showDateText);
+
+        date.textContent = showDateText;
 
         dateContainer.appendChild(headerDate);
         dateContainer.appendChild(date);

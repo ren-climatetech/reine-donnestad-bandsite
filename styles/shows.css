@@ -392,6 +392,7 @@ iframe {
   .allShows__container {
     display: flex;
     flex-direction: row;
+    align-items: center;
   }
 }
 
@@ -424,11 +425,11 @@ iframe {
   .shows__header--label {
     color: grey;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 1.5rem;
+    width: 15rem;
     padding-top: 3.75rem;
     padding-bottom: 2.8rem;
     padding-left: 2.8rem;
-    width: 15rem;
   }
 }
 
@@ -445,6 +446,7 @@ iframe {
   .date {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+    vertical-align: middle;
   }
 }
 
@@ -461,19 +463,23 @@ iframe {
   .location, .venue {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+    vertical-align: middle;
   }
 }
 
 button {
-  padding-left: 1rem;
-  padding-right: 1rem;
   margin: 1rem;
   color: #FAFAFA;
   font-size: 1.125rem;
   font-weight: 400;
   background-color: #323232;
   border-radius: 0.5rem;
-  width: 12rem;
+  width: 90%;
   height: 3.5rem;
   align-items: center;
+}
+@media screen and (min-width: 768px) {
+  button {
+    width: 12rem;
+  }
 }/*# sourceMappingURL=shows.css.map */

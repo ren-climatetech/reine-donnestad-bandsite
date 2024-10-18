@@ -1,9 +1,31 @@
+//NEW STUFF
+
+// fetch('https://unit-2-project-api-25c1595833b2.herokuapp.com/', {
+//     method: 'POST', 
+//     headers: {
+//         'Content-Type': 'application/json', // Indicates the data type
+//     },
+//     body: JSON.stringify({
+//         key: 'value', 
+//     }),
+// })
+// .then(response => response.json())
+// .then(data => console.log(data))
+// .catch(error => console.error('Error:', error));
+
+const API_KEY = "302d91b6-c483-47a9-990f-48a1daf1ee96";
+
+const bandSiteApi = new BandSiteApi(API_KEY); 
+
+
+const allShows = document.querySelector('.comment-container');
+
 
 //Step 1: Create local data
 const commentEntries = [
-    {name: "Victor Pinto", date:"11/02/2023", comment:"This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains."},
-    {name:"Christina Cabrera", date: "10/28/2023", comment: "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day."},
-    {name:"Isaac Tadesse", date: "10/20/2023", comment: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough."}
+    // {name: "Victor Pinto", date:"11/02/2023", comment:"This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains."},
+    // {name:"Christina Cabrera", date: "10/28/2023", comment: "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day."},
+    // {name:"Isaac Tadesse", date: "10/20/2023", comment: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough."}
 ];
 console.log(commentEntries);
 
@@ -60,14 +82,21 @@ function createCommentCard(entry) {
 
 
 //turn into async await. create instance of bandsite API, then follow loop
-let renderCommentCards = () => {
+let renderCommentCards = async () => {
     const myCommentsEl = document.querySelector(".comment__card--comment");
     myCommentsEl.innerHTML ="";
 
-    for (let i=0; i < commentEntries.length; i++){
-        const card = createCommentCard(commentEntries[i]);
-        myCommentsEl.append(card);
-    }
+    try {
+        const commentEntries = await bandSiteApi.getComments();  //added this to fetch comments
+        console.log("check:", commentEntries); //added this to check if comments are fetching
+
+        for (let i=0; i < commentEntries.length; i++){
+            const card = createCommentCard(commentEntries[i]);
+            myCommentsEl.append(card);
+        }
+        } catch (error) {
+            console.error("Error fetching comments:", error);
+        }
 };
 
 renderCommentCards();
@@ -78,7 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const formEl = document.querySelector(".comment");
 
-    formEl.addEventListener("submit",(event) => {
+    formEl.addEventListener("submit", async(event) => {
         event.preventDefault();
 
         let cardData = {
@@ -90,12 +119,32 @@ document.addEventListener("DOMContentLoaded", () => {
     commentEntries.push(cardData);
     console.log(commentEntries);
 
+    try{
+        const response = await fetch('https://unit-2-project-api-25c1595833b2.herokuapp.com/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(cardData), // Send the comment data
+        });
+
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+
+        const result = await response.json();
+        console.log('Success:', result);
+
     const newCommentCard = createCommentCard(cardData);
-    const commentsContainer = document.querySelector(".comment-container");
-    commentsContainer.appendChild(newCommentCard);
+    // const commentsContainer = document.querySelector(".comment-container");
+
+    commentsContainer.appendChild(newCommentCard);  //reference to line7
 
 
     formEl.reset();
+    } catch (error) {
+        console.error('Error:', error); // Handle errors
+    }
     });
 });
 

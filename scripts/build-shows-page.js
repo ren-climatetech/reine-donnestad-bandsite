@@ -109,13 +109,13 @@ console.log("check:", showData);
 
 renderShows();
 
-    // button.addEventListener('click',()=> {
-    //     console.log('someone bought a ticket');
-    // });
+//     button.addEventListener('click',()=> {
+//         console.log('someone bought a ticket');
+//     });
     
     
 
 
 
 
-// console.log(allShows);
+// // console.log(allShows);

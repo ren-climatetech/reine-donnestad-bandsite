@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="./styles/bio.css" />
-    <script src="./scripts/index-page.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" defer></script>
+    <script src="scripts/band-site-api.js" defer></script>
+    <script src="scripts/index-page.js" defer></script>
   </head>
 
   <body>
@@ -131,7 +133,7 @@
         <div>
         <input class="commentforum__input" placeholder="Enter your name" type="text" id="inputName" name="userName" required/>
         </div>
-        <div><label for="inputComment" class="commentforum__label">COMMENT</label></div>
+        <label for="inputComment" class="commentforum__label">COMMENT</label>
 
         <textarea name="userComment" class="commentforum__input" placeholder="Add a new comment" id="inputComment"  required ></textarea>
         <button class="commentforum__button" type="submit">COMMENT</button>
@@ -150,7 +152,7 @@
           <p class="comment__card--name"></p>
           <div class="comment__card--date"> </div>    
         </div>
-        <p class="comment__card--comment"></p>
+        <div class="comment__card--comment"></div>
         
     </article>
   </div>

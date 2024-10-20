@@ -12,10 +12,13 @@ class BandSiteApi {
     } 
 
 // postComment: This method accepts a comment object as its only parameter. It must send a POST request to the API with the comment object as the body, using the API key instance property (this.apiKey) to authenticate the request.
-async postComments(commentObject) {
+async postComment(commentObject) {
     try {
-        const res = await axios.post(
-            `${this.baseURL}/comments?api_key=${this.apiKey}`, commentObject);
+        const res = await axios.post(`${this.baseURL}/comments?api_key=${this.apiKey}`, commentObject,{
+                headers: {
+                    'Content-Type': 'application/json', 
+                },
+            });
         return res.data;
     } catch (error) {
         console.log("Error adding comment:",error);
@@ -28,8 +31,7 @@ async postComments(commentObject) {
 
 async getComments() {
     try {
-        const response = await axios.get(                                    
-            `${this.baseURL}/comments?api_key=${this.apiKey}`);
+        const response = await axios.get(`${this.baseURL}/comments?api_key=${this.apiKey}`);
 
 // The getComments method must sort the array of comments from the API, returning them in order from newest to oldest.
         return response.data.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
@@ -57,9 +59,10 @@ async getShows() {
 }
 }
 
+
 // You must create an instance of the BandSiteApi class and use this to interact with the API.
 
-// const api = new BandSiteApi(API_KEY);
+// const formSubmission = new BandSiteApi(API_KEY);
 
 // async function interactWithApi(){
 //     const comments = await api.getComments();

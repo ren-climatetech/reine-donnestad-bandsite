@@ -1,18 +1,3 @@
-//NEW STUFF
-
-// fetch('https://unit-2-project-api-25c1595833b2.herokuapp.com/', {
-//     method: 'POST', 
-//     headers: {
-//         'Content-Type': 'application/json', // Indicates the data type
-//     },
-//     body: JSON.stringify({
-//         key: 'value', 
-//     }),
-// })
-// .then(response => response.json())
-// .then(data => console.log(data))
-// .catch(error => console.error('Error:', error));
-
 const API_KEY = "302d91b6-c483-47a9-990f-48a1daf1ee96";
 
 const bandSiteApi = new BandSiteApi(API_KEY); 
@@ -59,7 +44,8 @@ function createCommentCard(entry) {
 
     const dateElement = document.createElement("span");
     dateElement.classList.add("comment__card--date");
-    dateElement.innerText = entry.date;
+    const commentDate = new Date(entry.timestamp).toLocaleDateString();
+    dateElement.innerText = commentDate;
 
     nameWithDateDiv.appendChild(pTag);
     nameWithDateDiv.appendChild(dateElement);
@@ -107,110 +93,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const formEl = document.querySelector(".comment");
 
-    formEl.addEventListener("submit", async(event) => {
+    formEl.addEventListener("submit", async (event) => {
         event.preventDefault();
 
         let cardData = {
             name: event.target.userName.value,
-            date: new Date ().toLocaleDateString(),
             comment: event.target.userComment.value,
-            // image: event.target.image.value || "",
         };
-    commentEntries.push(cardData);
+
     console.log(commentEntries);
-
-    try{
-        const response = await fetch('https://unit-2-project-api-25c1595833b2.herokuapp.com/', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(cardData), // Send the comment data
-        });
-
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-
-        const result = await response.json();
+    
+    try {
+        const response = await bandSiteApi.postComment(cardData);
+        console.log(response);
+        const result = await response;
         console.log('Success:', result);
 
     const newCommentCard = createCommentCard(cardData);
-    // const commentsContainer = document.querySelector(".comment-container");
+    const commentsContainer = document.querySelector(".comment-container");
 
+   
     commentsContainer.appendChild(newCommentCard);  //reference to line7
-
+    
 
     formEl.reset();
     } catch (error) {
         console.error('Error:', error); // Handle errors
-    }
+        }
     });
 });
-
-
-// //this is to get the button to click
-// document.getElementById('commentForm').addEventListener('submit', function(event){
-//     event.preventDefault();
-
-//     const name = document.getElementById('inputName').value;
-//     const comment = document.getElementById('inputComment').value;
-
-//     console.log("Name:", name);
-//     console.log("Comment:", comment);
-
-//     const outputEntry = document.getElementById('outputEntry');
-//     const newComment = document.createElement('p');
-//     newComment.innerHTML = `<strong>${name}:</strong> ${comment}`;
-
-//     console.log("New Comment Element:", newComment);
-//     console.log("Output Element:", outputEntry);
-
-//     outputEntry.appendChild(newComment);
-
-//     document.getElementById('commentForm').reset();
-
-// });
-
-
-// //2. Get values from the form. 
-// form.addEventListener('submit',function(e){
-//     e.preventDefault();
-//     console.log(e.target.userName.value);
-//     console.log(e.target.date);
-//     console.log(e.target.inputComment);
-
-// });
-
-
-// const form = document.querySelector(".comment__forum");
-// form.addEventListener("submit",(event) => {
-//     event.preventDefault()
-
-//     const name = event.target.nameInput.value;
-//     const comment = event.target.position.value;
-
-//     console.log({name});
-//     console.log({comment});
-// });
-
-// //create a list item 
-
-// // add text
-
-// // append the list item in our HTML
-
-// const userName = document.createElement ("li");
-
-// playerItem.textContent = `$name`;
-
-
-// //function to create a new comment entry
-
-// // const createEntry = function(name,date,comment){
-//     return {
-//         name: name,
-//         date: date,
-//         comment: comment,
-//     };
-

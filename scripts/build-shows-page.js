@@ -97,6 +97,11 @@ console.log("check:", showData);
 
         const button = document.createElement("button");
         button.innerText = "BUY TICKETS";
+
+        button.addEventListener('click', () => {
+            showContainer.classList.toggle('active'); 
+            console.log('someone bought a ticket');
+        });
         
         showContainer.appendChild(dateContainer);
         showContainer.appendChild(venueContainer);
@@ -108,14 +113,3 @@ console.log("check:", showData);
 }
 
 renderShows();
-
-//     button.addEventListener('click',()=> {
-//         console.log('someone bought a ticket');
-//     });
-    
-    
-
-
-
-
-// // console.log(allShows);

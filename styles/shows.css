@@ -54,8 +54,9 @@
   text-align: center;
   padding: 1rem;
 }
-.nav__menu--hover:hover {
+.nav__menu--hover:hover, .nav__menu--hover.active {
   border-bottom: 0.25rem solid #FFFFFF;
+  font-weight: 600;
 }
 @media screen and (min-width: 768px) {
   .nav__menu--hover {
@@ -68,7 +69,7 @@
   color: #FFFFFF;
 }
 .nav__button:hover {
-  font-weight: 700;
+  font-weight: 400;
 }
 .nav__button a {
   text-decoration: none;
@@ -189,6 +190,7 @@ p {
 @media screen and (min-width: 768px) {
   .footer__social--links {
     justify-content: space-between;
+    margin-left: -10rem;
   }
 }
 .footer__icon {
@@ -377,6 +379,7 @@ iframe {
   .shows {
     display: flex;
     flex-direction: column;
+    padding-bottom: 1.5rem;
   }
 }
 
@@ -386,7 +389,6 @@ iframe {
   width: 100%;
   padding-left: 1rem;
   padding-right: 1rem;
-  padding-bottom: 1.5rem;
 }
 @media screen and (min-width: 768px) {
   .allShows__container {
@@ -465,6 +467,14 @@ iframe {
     padding-right: 1.5rem;
     vertical-align: middle;
   }
+}
+
+.allShows__container.active {
+  background-color: #e1e1e1;
+}
+
+.allShows__container:hover {
+  background-color: #fafafa;
 }
 
 button {

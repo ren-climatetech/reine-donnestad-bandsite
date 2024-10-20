@@ -11,9 +11,7 @@
   display:flex;
   flex-direction: column;
   justify-content: center;
-  // gap: 5rem;
   vertical-align: middle;
-  // flex-grow: .5;
   position: relative;
   width: auto;
   height: 60vh;
@@ -23,9 +21,6 @@
     flex-direction: column;
     z-index: 1;
 
-    // @include tablet {
-    //   @include padding-tablet;
-    // }
 
     @include desktop{
       display: flex;
@@ -38,7 +33,6 @@
   &__overlay {
     display: flex;
     position: absolute;
-    // z-index: -1;
     width:100%;
     height:100%;
     background-color: $BandSite-Black;
@@ -53,7 +47,6 @@
     font-weight: 400;
     font-size: $font-32;
     padding-left: $padding-16;
-    // @include padding-mobile;
   
     @include tablet {
       @include padding-tablet;
@@ -69,12 +62,10 @@
     z-index: 1;
     color: $White;
     padding-left: $padding-16;
-    // @include padding-mobile;
   
     @include tablet {
       min-width: 40rem;
       @include padding-tablet;
-      // margin: 0 10%;
     }
   }
 
@@ -92,7 +83,6 @@
 
     @include tablet {
     @include padding-tablet;
-    // width: 30rem;
     min-width: 30rem;
     padding-bottom: $padding-24;
     }
@@ -104,9 +94,7 @@
 }
 
 iframe {
-  // height: auto;
   width:100%;
-  // max-width: 30rem;
 }
 
 main {
@@ -118,9 +106,6 @@ main {
     width: 100%;
     justify-content: space-around;
   }
-
-
-  
 }
 
 .header__label{
@@ -147,6 +132,7 @@ main {
   @include tablet{
     display: flex;
     flex-direction: column;
+     padding-bottom: $padding-24;
   }
 }
 
@@ -155,9 +141,7 @@ main {
   margin-bottom: 1rem;
   width: 100%;
   @include padding-mobile;
-  // padding-top: $padding-24; 
-  //could also add padding-bottom 0 to Shows header
-  padding-bottom: $padding-24;
+ 
   @include tablet{
     display: flex;
     flex-direction: row;
@@ -175,22 +159,9 @@ main {
 
   @include tablet {
     display: none;
-  //   display: flex;
-  // //  padding-left: $padding-24;
-  // //  padding-right: $padding-24;
-  // }
 }
 }
 
-// .date-container, .venue-container, .location-container{
-//   @include tablet {
-//     display: flex;
-//   padding-bottom: 0;
-//   margin-bottom: 0;
-//   justify-content: center;
-//   vertical-align: center;
-// }
-// }
 
 .shows__header--tablet{
   display: none;
@@ -211,8 +182,6 @@ main {
   padding-top:3.75rem;
   padding-bottom:2.8rem;
   padding-left:2.8rem; 
-  // @include padding-mobile;
-  // padding-bottom: $padding-16;
 }
 }
 
@@ -246,7 +215,13 @@ main {
    }
 }
 
+.allShows__container.active {
+  background-color: #e1e1e1; 
+}
 
+.allShows__container:hover {
+  background-color: #fafafa;
+}
 
 
 button {

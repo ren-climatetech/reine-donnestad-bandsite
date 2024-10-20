@@ -91,10 +91,35 @@ renderCommentCards();
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    const formEl = document.querySelector(".comment");
+    const formEl = document.querySelector(".commentforum");
+    const nameInput = document.getElementById("inputName");
+    const commentInput = document.getElementById("inputComment");
 
     formEl.addEventListener("submit", async (event) => {
         event.preventDefault();
+
+        nameInput.classList.remove('error');
+        commentInput.classList.remove('error');
+
+        let hasError = false;
+        
+        if (nameInput.value.trim() === '') {
+            console.log('Name input is empty');
+            nameInput.classList.add('error'); // Add error class if name is empty
+            hasError = true;
+        }
+
+        // Validate comment
+        if (commentInput.value.trim() === '') {
+            console.log('Comment input is empty'); 
+            commentInput.classList.add('error'); // Add error class if comment is empty
+            hasError = true;
+        }
+
+        // If there's an error, show the outline and return early
+        if (hasError) {
+            return; // Exit if there's an error
+        }
 
         let cardData = {
             name: event.target.userName.value,
@@ -118,7 +143,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     formEl.reset();
     } catch (error) {
-        console.error('Error:', error); // Handle errors
+        console.error('Error:', error);
         }
     });
 });

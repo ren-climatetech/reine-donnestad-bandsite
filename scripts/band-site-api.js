@@ -59,27 +59,3 @@ async getShows() {
 }
 }
 
-
-// You must create an instance of the BandSiteApi class and use this to interact with the API.
-
-// const formSubmission = new BandSiteApi(API_KEY);
-
-// async function interactWithApi(){
-//     const comments = await api.getComments();
-//     console.log("Comments:",comments);
-
-//     const shows = await api.getShows();
-//     console.log("Shows:",shows);
-
-//     const newComment = {
-//         name: " ",
-//         comment: " "
-//     };
-
-//     const postedComment = await  api.postComments(newComment);
-//     console.log("Posted Comment:",postedComment);
-// }
-
-// interactWithApi();
-
-

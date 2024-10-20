@@ -1,7 +1,3 @@
-/*too small*/
-/*too small*/
-/*too small*/
-/*this is pulling the styles from each font file, so when the font-weight is specified, there is a match*/
 @font-face {
   font-family: "Avenir";
   src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format("opentype"), url("../../assets/fonts/Alternative files/AvenirNextLTPro.ttf") format("truetype");
@@ -54,8 +50,9 @@
   text-align: center;
   padding: 1rem;
 }
-.nav__menu--hover:hover {
+.nav__menu--hover:hover, .nav__menu--hover.active {
   border-bottom: 0.25rem solid #FFFFFF;
+  font-weight: 600;
 }
 @media screen and (min-width: 768px) {
   .nav__menu--hover {
@@ -68,7 +65,7 @@
   color: #FFFFFF;
 }
 .nav__button:hover {
-  font-weight: 700;
+  font-weight: 400;
 }
 .nav__button a {
   text-decoration: none;
@@ -189,6 +186,7 @@ p {
 @media screen and (min-width: 768px) {
   .footer__social--links {
     justify-content: space-between;
+    margin-left: -10rem;
   }
 }
 .footer__icon {
@@ -442,6 +440,8 @@ body {
   .comment {
     justify-content: center;
     padding: 1.5rem;
+    margin: 0 10%;
+    width: auto;
   }
 }
 @media screen and (min-width: 768px) and (min-width: 1280px) {
@@ -475,7 +475,7 @@ body {
 }
 
 .commentforum {
-  margin: 0;
+  margin-right: 1rem;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -486,7 +486,7 @@ body {
   color: #AFAFAF;
   font-size: 1.125rem;
   font-weight: 600;
-  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 .commentforum__input {
   color: #323232;
@@ -496,9 +496,22 @@ body {
   background-color: #FAFAFA;
   border: 0.0625rem solid #AFAFAF;
   border-radius: 0.5rem;
-  margin-bottom: 1rem;
   width: 100%;
-  width: 60vw;
+}
+.commentforum__input:focus {
+  border-color: black;
+  outline: none;
+}
+@media screen and (min-width: 768px) {
+  .commentforum__input {
+    width: 60vw;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .commentforum__input {
+    max-width: 40vw;
+    margin: auto;
+  }
 }
 .commentforum__button {
   color: #FAFAFA;
@@ -508,8 +521,17 @@ body {
   background-color: #323232;
   border-radius: 0.5rem;
   margin-top: 1rem;
-  height: 4rem;
-  align-items: center;
+  height: 3.5rem;
+  width: 12rem;
+  align-self: flex-end;
+}
+.commentforum__input--comment {
+  height: 5rem;
+}
+
+.error {
+  border: 2px solid #D22D22;
+  outline: none;
 }
 
 .comment-container {
@@ -521,6 +543,12 @@ body {
 @media screen and (min-width: 768px) {
   .comment-container {
     margin: 0 10%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comment-container {
+    max-width: 40vw;
+    margin: auto;
   }
 }
 
@@ -535,6 +563,12 @@ body {
 @media screen and (min-width: 768px) {
   .comment__card {
     width: 60vw;
+    margin: auto;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comment__card {
+    max-width: 40vw;
     margin: auto;
   }
 }
@@ -567,6 +601,12 @@ body {
     margin: auto;
   }
 }
+@media screen and (min-width: 1280px) {
+  .comment__position {
+    max-width: 40vw;
+    margin: auto;
+  }
+}
 
 .comment__image--empty {
   border-radius: 100%;
@@ -575,7 +615,7 @@ body {
   height: 3.5rem;
   -o-object-fit: none;
      object-fit: none;
-  margin-top: 1.25rem;
+  margin-top: 1rem;
 }
 
 .comment__nameWithDate {

@@ -64,8 +64,9 @@
     text-align: center;
     padding: $padding-16;
 
-    &:hover {
+    &:hover,    &.active {
       border-bottom: 0.25rem solid $White;
+      font-weight: 600;
     }
 
     @include tablet {
@@ -79,7 +80,7 @@
     color: $White;
 
     &:hover {
-      font-weight: 700;
+      font-weight: 400;
     }
 
     a {
@@ -174,10 +175,6 @@ p {
     &__logo{
       align-items: center;
       vertical-align: middle;
-
-      @include tablet{
-        // flex-basis:100%;
-      }
     }
 
     &__contact{
@@ -204,9 +201,8 @@ p {
       align-items: center;
   
       @include tablet{
-        // flex-basis:auto;
         justify-content: space-between;
-    
+        margin-left: -10rem;
       }
     }
 
@@ -260,28 +256,3 @@ p {
       }
     }
 }
-
-
-// .footer{
-//   background-color: $BandSite-Black;
-//   color: $White;
-//   box-sizing: border-box;
-
-//   @include tablet{
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: space-around;
-//     gap: 5rem;
-//   }
-
-//   &__social--links2 {
-
-//     @include tablet {
-//     display: none;
-//     }
-//  }
-//   &__social--links2 {
-//     display: none;
-//   }
-  
-// }

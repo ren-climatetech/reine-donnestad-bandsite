@@ -1,3 +1,7 @@
+/*too small*/
+/*too small*/
+/*too small*/
+/*this is pulling the styles from each font file, so when the font-weight is specified, there is a match*/
 @font-face {
   font-family: "Avenir";
   src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format("opentype"), url("../../assets/fonts/Alternative files/AvenirNextLTPro.ttf") format("truetype");
@@ -186,6 +190,11 @@ p {
 @media screen and (min-width: 768px) {
   .footer__social--links {
     justify-content: space-between;
+    margin-left: -3rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__social--links {
     margin-left: -10rem;
   }
 }

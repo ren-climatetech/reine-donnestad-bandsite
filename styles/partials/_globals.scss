@@ -202,6 +202,10 @@ p {
   
       @include tablet{
         justify-content: space-between;
+        margin-left: -3rem;
+      }
+
+      @include desktop{
         margin-left: -10rem;
       }
     }

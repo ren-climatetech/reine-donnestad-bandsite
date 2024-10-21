@@ -190,6 +190,11 @@ p {
 @media screen and (min-width: 768px) {
   .footer__social--links {
     justify-content: space-between;
+    margin-left: -3rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__social--links {
     margin-left: -10rem;
   }
 }

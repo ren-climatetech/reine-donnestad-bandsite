@@ -622,8 +622,7 @@ body {
   background-color: #AFAFAF;
   width: 3.5rem;
   height: 3.5rem;
-  -o-object-fit: none;
-     object-fit: none;
+  object-fit: none;
   margin-top: 1rem;
 }
 

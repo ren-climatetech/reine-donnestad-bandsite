@@ -34,7 +34,7 @@ async getComments() {
         const response = await axios.get(`${this.baseURL}/comments?api_key=${this.apiKey}`);
 
 // The getComments method must sort the array of comments from the API, returning them in order from newest to oldest.
-        return response.data.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+        return response.data.sort((a, b) => (b.timestamp) - (a.timestamp));
 
     // console.log(this.getComments)
     } catch (error) {

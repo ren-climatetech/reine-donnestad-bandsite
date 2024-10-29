@@ -7,12 +7,12 @@ const allShows = document.querySelector('.comment-container');
 
 
 //Step 1: Create local data
-const commentEntries = [
-    // {name: "Victor Pinto", date:"11/02/2023", comment:"This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains."},
-    // {name:"Christina Cabrera", date: "10/28/2023", comment: "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day."},
-    // {name:"Isaac Tadesse", date: "10/20/2023", comment: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough."}
-];
-console.log(commentEntries);
+// const commentEntries = [
+//     // {name: "Victor Pinto", date:"11/02/2023", comment:"This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains."},
+//     // {name:"Christina Cabrera", date: "10/28/2023", comment: "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day."},
+//     // {name:"Isaac Tadesse", date: "10/20/2023", comment: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough."}
+// ];
+// console.log(commentEntries);
 
 //Step 2: Create a function to render HTML elements. Parent element is class "comment__card" with three children: 1) "comment__card--name" 2) "comment__card--date" and 3) comment__card--comment, where "(entry)" is the object. 
 
@@ -89,7 +89,7 @@ renderCommentCards();
 
 //Method for Comment Button Action
 
-document.addEventListener("DOMContentLoaded", () => {
+// document.addEventListener("DOMContentLoaded", () => {
 
     const formEl = document.querySelector(".commentforum");
     const nameInput = document.getElementById("inputName");
@@ -126,19 +126,13 @@ document.addEventListener("DOMContentLoaded", () => {
             comment: event.target.userComment.value,
         };
 
-    console.log(commentEntries);
+    // console.log(commentEntries);
     
     try {
         const response = await bandSiteApi.postComment(cardData);
         console.log(response);
-        const result = await response;
-        console.log('Success:', result);
 
-    const newCommentCard = createCommentCard(cardData);
-    const commentsContainer = document.querySelector(".comment-container");
-
-   
-    commentsContainer.appendChild(newCommentCard);  //reference to line7
+        await renderCommentCards();
     
 
     formEl.reset();
@@ -146,4 +140,3 @@ document.addEventListener("DOMContentLoaded", () => {
         console.error('Error:', error);
         }
     });
-});
